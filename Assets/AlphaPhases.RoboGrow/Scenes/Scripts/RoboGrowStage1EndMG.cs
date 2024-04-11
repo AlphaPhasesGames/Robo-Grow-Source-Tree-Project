@@ -79,8 +79,13 @@ namespace Alpha.Phases.Robo.Grow
         public TextMeshProUGUI MGEndText2;
         public TextMeshProUGUI MGNotBigEnough;
         public TextMeshProUGUI MGAssesment;
-     
 
+        public bool text1Read;
+        public bool text2Read;
+        public bool text3Read;
+        public bool text4Read;
+        public bool text5Read;
+        public bool textRead6;
         public Button progressText;
         public Button progressTextBack;
 
@@ -116,173 +121,187 @@ namespace Alpha.Phases.Robo.Grow
         {
             if (currentStage1TreeText == 1)
             {
+                if (!text1Read)
+                {
+                    stageLabels.gameObject.SetActive(false);
 
-                stageLabels.gameObject.SetActive(false);
-             
-                eggItemButton.gameObject.SetActive(true);
-                larvaItemButton.gameObject.SetActive(true);
-                pupaItemButton.gameObject.SetActive(true);
-                adultItemButton.gameObject.SetActive(true);
+                    eggItemButton.gameObject.SetActive(true);
+                    larvaItemButton.gameObject.SetActive(true);
+                    pupaItemButton.gameObject.SetActive(true);
+                    adultItemButton.gameObject.SetActive(true);
 
 
-                progressTextBack.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
-                textPanalToHide.SetActive(true);
-                MGEndText.enabled = false;
-                MGEndText1.enabled = false;
-                MGEndText2.enabled = false;
-                MGAssesment.enabled = true;
-                MGAssesment.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    progressText.gameObject.SetActive(false);
+                    textPanalToHide.SetActive(true);
+                    MGEndText.enabled = false;
+                    MGEndText1.enabled = false;
+                    MGEndText2.enabled = false;
+                    MGAssesment.enabled = true;
+                    MGAssesment.gameObject.SetActive(true);
 
-                TTSMGEndTextButton1.gameObject.SetActive(false);
-                TTSMGEndTextButton1a.gameObject.SetActive(false);
-                TTSMGEndTextButton1b.gameObject.SetActive(false);
-                TTSMGAssesmentButton.gameObject.SetActive(true);
-                MGNotBigEnough.enabled = false;
-                TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
-             
-              
+                    TTSMGEndTextButton1.gameObject.SetActive(false);
+                    TTSMGEndTextButton1a.gameObject.SetActive(false);
+                    TTSMGEndTextButton1b.gameObject.SetActive(false);
+                    TTSMGAssesmentButton.gameObject.SetActive(true);
+                    MGNotBigEnough.enabled = false;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
+                    text1Read = true;
+                }
             }
 
-                if (currentStage1TreeText == 2)
-            {
-                if (!textBeenRead)
+             if (currentStage1TreeText == 2)
+            { 
+                if (!text2Read)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                progressTextBack.gameObject.SetActive(false);
-                textPanalToHide.SetActive(true);
-                MGEndText.enabled = true;
-                MGEndText1.enabled = false;
-                MGEndText2.enabled = false;
-              
-            
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(false);
+                    textPanalToHide.SetActive(true);
+                    MGEndText.enabled = true;
+                    MGEndText1.enabled = false;
 
-                TTSMGEndTextButton1.gameObject.SetActive(true);
-                TTSMGEndTextButton1a.gameObject.SetActive(false);
-                TTSMGEndTextButton1b.gameObject.SetActive(false);
-                cocoonToAppearAniml.SetBool("mg1LevelOver", true);
-                MGAssesment.enabled = false;
-                MGAssesment.gameObject.SetActive(false);
-                TTSMGAssesmentButton.gameObject.SetActive(false);
+                    TTSMGEndTextButton1.gameObject.SetActive(true);
+                    TTSMGEndTextButton1a.gameObject.SetActive(false);
+                    TTSMGEndTextButton1b.gameObject.SetActive(false);
+                    cocoonToAppearAniml.SetBool("mg1LevelOver", true);
+                    MGAssesment.enabled = false;
+                    MGAssesment.gameObject.SetActive(false);
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
 
-                MGNotBigEnough.enabled = false;
-                TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
+                    MGNotBigEnough.enabled = false;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    text2Read = true;
                 }
             }
 
             if (currentStage1TreeText == 3)
             {
-                if (!textBeenRead)
+                if (!text3Read)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(true);
+
+                    MGAssesment.enabled = false;
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
+                    MGAssesment.gameObject.SetActive(false);
+                    MGEndText.enabled = false;
+                    MGEndText1.enabled = true;
+                    MGEndText2.enabled = false;
+
+                    TTSMGEndTextButton1.gameObject.SetActive(false);
+                    TTSMGEndTextButton1a.gameObject.SetActive(true);
+                    TTSMGEndTextButton1b.gameObject.SetActive(false);
+
+                    MGNotBigEnough.enabled = false;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+
+                    text3Read = true;
                 }
-                progressTextBack.gameObject.SetActive(true);
-
-                MGAssesment.enabled = false;
-                TTSMGAssesmentButton.gameObject.SetActive(false);
-                MGAssesment.gameObject.SetActive(false);
-                MGEndText.enabled = false;
-                MGEndText1.enabled = true;
-                MGEndText2.enabled = false;
-
-
-
-                TTSMGEndTextButton1.gameObject.SetActive(false);
-                TTSMGEndTextButton1a.gameObject.SetActive(true);
-                TTSMGEndTextButton1b.gameObject.SetActive(false);
-
-
-
-
-                MGNotBigEnough.enabled = false;
-                TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
-                }
+             
             }
 
             if (currentStage1TreeText == 4)
             {
-                if (!textBeenRead)
+                if (!text4Read)
                 {
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    MGAssesment.enabled = false;
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
+                    MGAssesment.gameObject.SetActive(false);
+                    MGEndText.enabled = false;
+                    MGEndText1.enabled = false;
+                    MGEndText2.enabled = true;
+
+                    TTSMGEndTextButton1.gameObject.SetActive(false);
+                    TTSMGEndTextButton1a.gameObject.SetActive(false);
+                    TTSMGEndTextButton1b.gameObject.SetActive(true);
+
+                    MGNotBigEnough.enabled = false;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
                     progressText.gameObject.SetActive(false);
+                    StartCoroutine(ShowCocoonGrowing());
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    text4Read = true;
                 }
-                MGAssesment.enabled = false;
-                TTSMGAssesmentButton.gameObject.SetActive(false);
-                MGAssesment.gameObject.SetActive(false);
-                MGEndText.enabled = false;
-                MGEndText1.enabled = false;
-                MGEndText2.enabled = true;
-
-
-
-                TTSMGEndTextButton1.gameObject.SetActive(false);
-                TTSMGEndTextButton1a.gameObject.SetActive(false);
-                TTSMGEndTextButton1b.gameObject.SetActive(true);
-
-                MGNotBigEnough.enabled = false;
-                TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
-                StartCoroutine(ShowCocoonGrowing());
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
-                }
+  
             }
 
             if (currentStage1TreeText == 5)
             {
-                if (!textBeenRead)
+                if (!text5Read)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    MGAssesment.enabled = false;
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
+                    MGAssesment.gameObject.SetActive(false);
+                    textPanalToHide.SetActive(true);
+                    MGEndText.enabled = false;
+                    MGEndText1.enabled = false;
+                    MGEndText2.enabled = false;
+
+
+
+                    TTSMGEndTextButton1.gameObject.SetActive(false);
+                    TTSMGEndTextButton1a.gameObject.SetActive(false);
+                    TTSMGEndTextButton1b.gameObject.SetActive(false);
+
+                    MGNotBigEnough.enabled = true;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(true);
+                    StartCoroutine(MoveTextOn());
+
+                    // progressText.gameObject.SetActive(true);
+                    text5Read = true; 
                 }
-                MGAssesment.enabled = false;
-                TTSMGAssesmentButton.gameObject.SetActive(false);
-                MGAssesment.gameObject.SetActive(false);
-                textPanalToHide.SetActive(true);
-                MGEndText.enabled = false;
-                MGEndText1.enabled = false;
-                MGEndText2.enabled = false;
-
-
-
-                TTSMGEndTextButton1.gameObject.SetActive(false);
-                TTSMGEndTextButton1a.gameObject.SetActive(false);
-                TTSMGEndTextButton1b.gameObject.SetActive(false);
-
-                MGNotBigEnough.enabled = true;
-                TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(true);
-                StartCoroutine(MoveTextOn());
-               
-                // progressText.gameObject.SetActive(true);
             }
 
             if (currentStage1TreeText == 6)
             {
+                if (!textRead6)
+                {
+                    MGAssesment.enabled = false;
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
+                    MGAssesment.gameObject.SetActive(false);
+                    textPanalToHide.SetActive(false);
+                    MGEndText.enabled = false;
+                    MGEndText1.enabled = false;
+                    MGEndText2.enabled = false;
 
-                MGAssesment.enabled = false;
-                TTSMGAssesmentButton.gameObject.SetActive(false);
-                MGAssesment.gameObject.SetActive(false);
-                textPanalToHide.SetActive(false);
-                MGEndText.enabled = false;
-                MGEndText1.enabled = false;
-                MGEndText2.enabled = false;
+                    TTSMGEndTextButton1.gameObject.SetActive(false);
+                    TTSMGEndTextButton1a.gameObject.SetActive(false);
+                    TTSMGEndTextButton1b.gameObject.SetActive(false);
+                    textPanalToHide.SetActive(false);
 
-                TTSMGEndTextButton1.gameObject.SetActive(false);
-                TTSMGEndTextButton1a.gameObject.SetActive(false);
-                TTSMGEndTextButton1b.gameObject.SetActive(false);
-                textPanalToHide.SetActive(false);
-
-                MGNotBigEnough.enabled = false;
-                TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
+                    MGNotBigEnough.enabled = false;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
+                    textRead6 = true;
+                }
+               
 
 
             }
@@ -505,7 +524,7 @@ namespace Alpha.Phases.Robo.Grow
         {
             yield return new WaitForSeconds(3);
             currentStage1TreeText = 6;
-  
+            textRead6 = false;
         }
 
         void OnClick()
@@ -518,6 +537,12 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage1TreeText--;
+            text1Read = false;
+            text2Read = false;
+            text3Read = false;
+            text4Read = false;
+            text5Read = false;
+
         }
 
         void JobotStage1EndTree1()

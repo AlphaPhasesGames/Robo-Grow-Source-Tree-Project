@@ -19,6 +19,7 @@ namespace Alpha.Phases.Robo.Grow
         public RoboGrowTextBoxManager rgTextMan1;
         public GameObject seedButtonToEnable;
         public bool playOnlyOnce;
+        public bool runOnce;
         public Button speakEndOFLevel1Text;
         public TextMeshProUGUI endOFGameText;
 
@@ -57,51 +58,48 @@ namespace Alpha.Phases.Robo.Grow
         }
 
         // Update is called once per frame
-        void Update()
-        {
-            if (rgMain.stage1MinigameComplete && rgMain.stage1PondExamined && rgMain.stage1PlantRemovalComplete)
-            {
-
-               
-            }
-        }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
-                stage1ItemsTohide.SetActive(false);
-                robotAnims.enabled = true;
-                startGameAnim.enabled = true;
-                boxToDisable.enabled = false;
-                rgMain.MoveToLevel2();
-                textPanalToHide.SetActive(false);
-                robCont.enabled = false;
-                playerCanToDisable.SetActive(false);
-                mainCameraCamera.enabled = true;
-                mainCameraCamera.gameObject.SetActive(true);
-             
-                textPanalToHide.SetActive(false);
-                playerStage1Robot.gameObject.SetActive(false);
-                playerStage2Robot.gameObject.SetActive(true);
-                rgMain.task1TextUITick1.gameObject.SetActive(false);
-                rgMain.task1TextUITick2.gameObject.SetActive(false);
-                rgMain.task1TextUITick3.gameObject.SetActive(false);
-                playerStage1Robot.transform.position = startpoSitionOfPlayer.transform.position;
-           //     stage2ItemsToShow.SetActive(true);
-                doorOpenAnim.SetBool("closeDoor", true);
-                doorOpenAnim.SetBool("doorNeedsToBeOpen", false);
-                StartCoroutine(StartStage2());
-                help.enabled = false;
-                tasks.enabled = false;
-                //StartCoroutine(ResetDoor());
-                if (!playOnlyOnce)
+                if (!runOnce)
                 {
-                    LOLSDK.Instance.SubmitProgress(0, 20, 100);
-                    textPanalToHide.SetActive(true);
-                    playOnlyOnce = true;
-                    
+                    stage1ItemsTohide.SetActive(false);
+                    robotAnims.enabled = true;
+                    startGameAnim.enabled = true;
+                    boxToDisable.enabled = false;
+                    rgMain.MoveToLevel2();
+                    textPanalToHide.SetActive(false);
+                    robCont.enabled = false;
+                    playerCanToDisable.SetActive(false);
+                    mainCameraCamera.enabled = true;
+                    mainCameraCamera.gameObject.SetActive(true);
+
+                    textPanalToHide.SetActive(false);
+                    playerStage1Robot.gameObject.SetActive(false);
+                    playerStage2Robot.gameObject.SetActive(true);
+                    rgMain.task1TextUITick1.gameObject.SetActive(false);
+                    rgMain.task1TextUITick2.gameObject.SetActive(false);
+                    rgMain.task1TextUITick3.gameObject.SetActive(false);
+                    playerStage1Robot.transform.position = startpoSitionOfPlayer.transform.position;
+                    //     stage2ItemsToShow.SetActive(true);
+                    doorOpenAnim.SetBool("closeDoor", true);
+                    doorOpenAnim.SetBool("doorNeedsToBeOpen", false);
+                    StartCoroutine(StartStage2());
+                    help.enabled = false;
+                    tasks.enabled = false;
+                    //StartCoroutine(ResetDoor());
+                    if (!playOnlyOnce)
+                    {
+                        LOLSDK.Instance.SubmitProgress(0, 20, 100);
+                        textPanalToHide.SetActive(true);
+                        playOnlyOnce = true;
+
+                    }
+                    runOnce = true;
                 }
+  
 
 
             }
