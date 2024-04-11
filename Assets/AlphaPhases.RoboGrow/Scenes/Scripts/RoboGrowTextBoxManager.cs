@@ -113,7 +113,7 @@ namespace Alpha.Phases.Robo.Grow
         public bool text23Read;
         public bool text24Read;
 
-
+        public bool textHidden;
         public int currentStageOfText;
 
         private void Awake()
@@ -777,6 +777,7 @@ namespace Alpha.Phases.Robo.Grow
                     }                   
                 }
 
+                /*
                 if (currentStageOfText == 23)
                 {
                     // --- Organic Pond item ---
@@ -838,7 +839,7 @@ namespace Alpha.Phases.Robo.Grow
                     StartCoroutine(IncorrectGuess());
                 }
 
-
+                */
                 if (currentStageOfText == 24)
                 { 
                     if(!text24Read)
@@ -861,111 +862,70 @@ namespace Alpha.Phases.Robo.Grow
                 }
                 if (currentStageOfText == 25)
                 {
-                    // --- Organic Tree item ---
-                    // textPanalToHide.SetActive(false);
-                    textPanalToHide.SetActive(false);
-                    endStage1PanalToHide.SetActive(false);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                    jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-                    jobotIntroStage1Section1g.enabled = false;
-                    jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStage1Section1j.enabled = false;
-                    jobotIntroStage1Section1k.enabled = false;
-                    jobotIntroStage1Section1l.enabled = false;
-                    jobotIntroStage1Section1m.enabled = false;
-                    jobotIntroStage1Section1n.enabled = false;
-                    jobotIntroStage1Section1o.enabled = false;
-                    jobotIntroStage1Section1p.enabled = false;
-                    jobotIntroStage1Section1q.enabled = false;
-                    jobotIntroStage1Section1r.enabled = false;
+                    if (!textHidden)
+                    {
+                        // --- Organic Tree item ---
+                        // textPanalToHide.SetActive(false);
+                        textPanalToHide.SetActive(false);
+                        endStage1PanalToHide.SetActive(false);
+                        jobotIntroStage1Section1.enabled = false;
+                        jobotIntroStage1Section1a.enabled = false;
+                        jobotIntroStage1Section1b.enabled = false;
+                        jobotIntroStage1Section1c.enabled = false;
+                        jobotIntroStage1Section1d.enabled = false;
+                        jobotIntroStage1Section1e.enabled = false;
+                        jobotIntroStage1Section1f.enabled = false;
+                        jobotIntroStage1Section1g.enabled = false;
+                        jobotIntroStage1Section1h.enabled = false;
+                        jobotIntroStage1Section1i.enabled = false;
+                        jobotIntroStage1Section1j.enabled = false;
+                        jobotIntroStage1Section1k.enabled = false;
+                        jobotIntroStage1Section1l.enabled = false;
+                        jobotIntroStage1Section1m.enabled = false;
+                        jobotIntroStage1Section1n.enabled = false;
+                        jobotIntroStage1Section1o.enabled = false;
+                        jobotIntroStage1Section1p.enabled = false;
+                        jobotIntroStage1Section1q.enabled = false;
+                        jobotIntroStage1Section1r.enabled = false;
 
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-                    TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-                    TTSJobot8.gameObject.SetActive(false);
-                    TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11.gameObject.SetActive(false);
-                    TTSJobot12.gameObject.SetActive(false);
-                    TTSJobot13.gameObject.SetActive(false);
-                    TTSJobot14.gameObject.SetActive(false);
-                    TTSJobot15.gameObject.SetActive(false);
-                    TTSJobot16.gameObject.SetActive(false);
-                    TTSJobot17.gameObject.SetActive(false);
-                    TTSJobot18.gameObject.SetActive(false);
-                    TTSJobot19.gameObject.SetActive(false);
+                        TTSJobot1.gameObject.SetActive(false);
+                        TTSJobot2.gameObject.SetActive(false);
+                        TTSJobot3.gameObject.SetActive(false);
+                        TTSJobot4.gameObject.SetActive(false);
+                        TTSJobot5.gameObject.SetActive(false);
+                        TTSJobot6.gameObject.SetActive(false);
+                        TTSJobot7.gameObject.SetActive(false);
+                        TTSJobot8.gameObject.SetActive(false);
+                        TTSJobot9.gameObject.SetActive(false);
+                        TTSJobot10.gameObject.SetActive(false);
+                        TTSJobot11.gameObject.SetActive(false);
+                        TTSJobot12.gameObject.SetActive(false);
+                        TTSJobot13.gameObject.SetActive(false);
+                        TTSJobot14.gameObject.SetActive(false);
+                        TTSJobot15.gameObject.SetActive(false);
+                        TTSJobot16.gameObject.SetActive(false);
+                        TTSJobot17.gameObject.SetActive(false);
+                        TTSJobot18.gameObject.SetActive(false);
+                        TTSJobot19.gameObject.SetActive(false);
 
-                    jobotIntroStage1Section1Rock.enabled = false;
-                    jobotIntroStage1Section1Tree.enabled = false;
-                    stage1CompleteButton.gameObject.SetActive(false);
-                    stage1CompleteText.gameObject.SetActive(false);
-                    TTSJobotRock.gameObject.SetActive(false);
-                    TTSJobotTree.gameObject.SetActive(false);
+                        jobotIntroStage1Section1Rock.enabled = false;
+                        jobotIntroStage1Section1Tree.enabled = false;
+                        stage1CompleteButton.gameObject.SetActive(false);
+                        stage1CompleteText.gameObject.SetActive(false);
+                        TTSJobotRock.gameObject.SetActive(false);
+                        TTSJobotTree.gameObject.SetActive(false);
+                        textHidden = true;
+                    }
+                  
                 }
 
                 if (currentStageOfText == 26)
                 {
                     // --- Organic Tree item ---
-                    //camerToDisable.SetActive(true);
-                    // robotPlayerCam.enabled = false;
                     endStage1PanalToHide.SetActive(true);
-                    // organicBoxesToHide.gameObject.SetActive(false);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                    jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-                    jobotIntroStage1Section1g.enabled = false;
-                    jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStage1Section1j.enabled = false;
-                    jobotIntroStage1Section1k.enabled = false;
-                    jobotIntroStage1Section1l.enabled = false;
-                    jobotIntroStage1Section1m.enabled = false;
-                    jobotIntroStage1Section1n.enabled = false;
-                    jobotIntroStage1Section1o.enabled = false;
-                    jobotIntroStage1Section1p.enabled = false;
-                    jobotIntroStage1Section1q.enabled = false;
-                    jobotIntroStage1Section1r.enabled = false;
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-                    TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-                    TTSJobot8.gameObject.SetActive(false);
-                    TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11.gameObject.SetActive(false);
-                    TTSJobot12.gameObject.SetActive(false);
-                    TTSJobot13.gameObject.SetActive(false);
-                    TTSJobot14.gameObject.SetActive(false);
-                    TTSJobot15.gameObject.SetActive(false);
-                    TTSJobot16.gameObject.SetActive(false);
-                    TTSJobot17.gameObject.SetActive(false);
-                    TTSJobot18.gameObject.SetActive(false);
-                    TTSJobot19.gameObject.SetActive(false);
-
-                    jobotIntroStage1Section1Rock.enabled = false;
-                    jobotIntroStage1Section1Tree.enabled = false;
+                  
                     stage1CompleteButton.gameObject.SetActive(true);
                     stage1CompleteText.gameObject.SetActive(true);
-                    TTSJobotRock.gameObject.SetActive(false);
-                    TTSJobotTree.gameObject.SetActive(false);
 
 
                     StartCoroutine(CloseText2());
@@ -1145,6 +1105,7 @@ namespace Alpha.Phases.Robo.Grow
                 public IEnumerator CloseText2()
                 {
                     yield return new WaitForSeconds(3);
+                    textHidden = false;
                     currentStageOfText = 25;
 
                 }
