@@ -21,11 +21,6 @@ namespace Alpha.Phases.Robo.Grow
             organicItemCam.enabled = false;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         void OnMouseDown()
         {

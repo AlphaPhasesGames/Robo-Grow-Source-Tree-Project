@@ -16,17 +16,7 @@ namespace Alpha.Phases.Robo.Grow
        // public Camera organicItemCam;
         public Camera playerCam;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-        //    organicItemCam.enabled = false;
-        }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         void OnMouseDown()
         {

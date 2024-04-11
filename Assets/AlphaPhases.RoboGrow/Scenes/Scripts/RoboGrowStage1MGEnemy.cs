@@ -4,7 +4,6 @@ using UnityEngine;
 using LoLSDK;
 using SimpleJSON;
 using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
 
 namespace Alpha.Phases.Robo.Grow
@@ -20,16 +19,6 @@ namespace Alpha.Phases.Robo.Grow
         public RoboGrowMain rgMain;
         public GameObject inGameCanvas;
         // Start is called before the first frame update
-        void Start()
-        {
-           // player.transform.position = playerRespawnLocation.transform.position;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -49,8 +38,6 @@ namespace Alpha.Phases.Robo.Grow
 
         public IEnumerator ShowTextForSetTime()
         {
-
-
            StartCoroutine(rgMiniGameScript.EatenByEnemy());
             yield return new WaitForSeconds(10f);
         }

@@ -18,15 +18,20 @@ namespace Alpha.Phases.Robo.Grow
         public bool boxesDestroyed;
         public bool boxesClicked;
 
-
+        public bool runOnce;
 
         // Update is called once per frame
         void Update()
         {
-            if (boxesDestroyed)
+            if (!runOnce)
             {
-                DestroyBoxes();
+                if (boxesDestroyed)
+                {
+                    DestroyBoxes();
+                    runOnce = true;
+                }
             }
+           
         }
 
         public void DestroyBoxes()

@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
 using LoLSDK;
 namespace Alpha.Phases.Robo.Grow
@@ -18,17 +15,7 @@ namespace Alpha.Phases.Robo.Grow
         {
             robotStage2Animator.keepAnimatorControllerStateOnDisable = false;
         }
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         public void ShowStage3Text()
         {

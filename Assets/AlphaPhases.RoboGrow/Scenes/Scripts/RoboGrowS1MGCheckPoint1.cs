@@ -4,7 +4,6 @@ using UnityEngine;
 using LoLSDK;
 using SimpleJSON;
 using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
 
 namespace Alpha.Phases.Robo.Grow
