@@ -34,6 +34,13 @@ namespace Alpha.Phases.Robo.Grow
         public Button TTSJobotPond1b;
         public Button TTSJobotPond1e;
 
+        public bool readText1;
+        public bool readText2;
+        public bool readText3;
+        public bool readText4;
+        public bool runOnce;
+
+
         public TextMeshProUGUI jobotIntroStage1Pond;
         public TextMeshProUGUI jobotIntroStage1Pond1a;
         public TextMeshProUGUI jobotIntroStage1Pond1b;
@@ -57,13 +64,13 @@ namespace Alpha.Phases.Robo.Grow
         // Start is called before the first frame update
         void Start()
         {
-            returnToPlayerCam.gameObject.SetActive(false);
+       //     returnToPlayerCam.gameObject.SetActive(false);
          //   pondCam.enabled = false;
-            textPanal.SetActive(false);
-            jobotIntroStage1Pond.enabled = false;
-            jobotIntroStage1Pond1a.enabled = false;
-            jobotIntroStage1Pond1b.enabled = false;
-            jobotIntroStage1Pond1e.enabled = false;
+       //     textPanal.SetActive(false);
+       //     jobotIntroStage1Pond.enabled = false;
+       //     jobotIntroStage1Pond1a.enabled = false;
+        //    jobotIntroStage1Pond1b.enabled = false;
+        //    jobotIntroStage1Pond1e.enabled = false;
 
         }
 
@@ -74,85 +81,90 @@ namespace Alpha.Phases.Robo.Grow
             
             if (currentStage1PondText == 1)
             {
-                if (!textBeenRead)
+                if (!readText1)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1PondFrogSpawnInfo");
+                    textPanal.SetActive(true);
+                    jobotIntroStage1Pond.gameObject.SetActive(true);
+                    jobotIntroStage1Pond1a.gameObject.SetActive(false);
+
+                    TTSJobotPond1.gameObject.SetActive(true);
+                    TTSJobotPond1a.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+                    readText1 = true;
                 }
-                progressTextBack.gameObject.SetActive(false);
-                textPanal.SetActive(true);
-                jobotIntroStage1Pond.enabled = true;
-                jobotIntroStage1Pond1a.enabled = false;
-                jobotIntroStage1Pond1b.enabled = false;
-                jobotIntroStage1Pond1e.enabled = false;
               
-
-
-                TTSJobotPond1.gameObject.SetActive(true);
-                TTSJobotPond1a.gameObject.SetActive(false);
-                TTSJobotPond1b.gameObject.SetActive(false);
-                TTSJobotPond1e.gameObject.SetActive(false);
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
-                }
 
             }
 
             if (currentStage1PondText == 2)
             {
                 //  pondFrogspawnIntro2
-
-                if (!textBeenRead)
+                if (!readText2)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("stage1PondFrogSpawnInfoa");
+
+                    jobotIntroStage1Pond.gameObject.SetActive(false);
+                    jobotIntroStage1Pond1a.gameObject.SetActive(true);
+                    jobotIntroStage1Pond1b.gameObject.SetActive(false);
+
+                    TTSJobotPond1.gameObject.SetActive(false);
+                    TTSJobotPond1a.gameObject.SetActive(true);
+                    TTSJobotPond1b.gameObject.SetActive(false);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+                    readText2 = true;
                 }
-                progressTextBack.gameObject.SetActive(true);
-                jobotIntroStage1Pond.enabled = false;
-                jobotIntroStage1Pond1a.enabled = true;
-                jobotIntroStage1Pond1b.enabled = false;
-                jobotIntroStage1Pond1e.enabled = false;
 
-
-
-                TTSJobotPond1.gameObject.SetActive(false);
-                TTSJobotPond1a.gameObject.SetActive(true);
-                TTSJobotPond1b.gameObject.SetActive(false);
-                TTSJobotPond1e.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
-                }
             }
 
             if (currentStage1PondText == 3)
             {
                 //  pondFrogspawnIntro3
-
-                if (!textBeenRead)
+                if (!readText3)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1PondFrogSpawnInfob");
+
+                    jobotIntroStage1Pond1a.gameObject.SetActive(false);
+                    jobotIntroStage1Pond1b.gameObject.SetActive(true);
+                    jobotIntroStage1Pond1e.gameObject.SetActive(false);
+
+
+
+                    TTSJobotPond1a.gameObject.SetActive(false);
+                    TTSJobotPond1b.gameObject.SetActive(true);
+                    TTSJobotPond1e.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+                    readText3 = true;
                 }
-
-                jobotIntroStage1Pond.enabled = false;
-                jobotIntroStage1Pond1a.enabled = false;
-                jobotIntroStage1Pond1b.enabled = true;
-                jobotIntroStage1Pond1e.enabled = false;
-
-
-
-                TTSJobotPond1.gameObject.SetActive(false);
-                TTSJobotPond1a.gameObject.SetActive(false);
-                TTSJobotPond1b.gameObject.SetActive(true);
-                TTSJobotPond1e.gameObject.SetActive(false);
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
-                }
+               
             }
 
            
@@ -160,27 +172,29 @@ namespace Alpha.Phases.Robo.Grow
             if (currentStage1PondText == 4)
             {
                 //  jobotIntroStage1e
-
-                if (!textBeenRead)
+                if (!readText4)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+
+                    LOLSDK.Instance.SpeakText("stage1PondFrogSpawnInfoe");
+
+                    jobotIntroStage1Pond1b.gameObject.SetActive(false);
+                    jobotIntroStage1Pond1e.gameObject.SetActive(true);
+
+
+                    TTSJobotPond1b.gameObject.SetActive(false);
+                    TTSJobotPond1e.gameObject.SetActive(true);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+                    readText4 = true;
                 }
-
-                jobotIntroStage1Pond.enabled = false;
-                jobotIntroStage1Pond1a.enabled = false;
-                jobotIntroStage1Pond1b.enabled = false;
-                jobotIntroStage1Pond1e.enabled = true;
-
-
-                TTSJobotPond1.gameObject.SetActive(false);
-                TTSJobotPond1a.gameObject.SetActive(false);
-                TTSJobotPond1b.gameObject.SetActive(false);
-                TTSJobotPond1e.gameObject.SetActive(true);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
-                }
+         
             }
 
             if (currentStage1PondText == 5)
@@ -259,6 +273,10 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage1PondText--;
+            readText1 = false;
+            readText2 = false;
+            readText3 = false;
+            readText4 = false;
         }
 
         void JobotStage1Pond1()
