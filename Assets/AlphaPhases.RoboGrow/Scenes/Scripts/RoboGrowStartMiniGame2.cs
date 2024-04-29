@@ -30,6 +30,18 @@ namespace Alpha.Phases.Robo.Grow
         public bool textBeenRead;
         public bool progressTextIsShowing;
 
+
+        public bool text1Read1;
+        public bool text1Read2;
+        public bool text1Read3;
+        public bool text1Read4;
+        public bool text1Read5;
+        public bool text1Read6;
+        public bool text1Read7;
+        public bool text1Read8;
+        public bool text1Read9;
+        public bool text1Read10;
+
         public Button TTSJobotStagePond2;
         public Button TTSJobotStagePond2a;
         public Button TTSJobotStagePond2b;
@@ -80,7 +92,7 @@ namespace Alpha.Phases.Robo.Grow
             //returnToPlayerCam.gameObject.SetActive(false);
             pondCamAndPlayer.SetActive(false);
             textPanal.SetActive(false);
-            jobotIntroStage2Pond.enabled = false;
+          /*  jobotIntroStage2Pond.enabled = false;
             jobotIntroStage2Pond1a.enabled = false;
             jobotIntroStage2Pond1b.enabled = false;
             jobotIntroStage2Pond1c.enabled = false;
@@ -89,6 +101,7 @@ namespace Alpha.Phases.Robo.Grow
             jobotIntroStage2Pond1f.enabled = false;
             jobotIntroStage2Pond1Eaten.enabled = false;
             jobotNotLargeEnough.enabled = false;
+          */
         }
 
         // Update is called once per frame
@@ -98,232 +111,150 @@ namespace Alpha.Phases.Robo.Grow
 
             if (currentStage2PondText == 1)
             {
-                if (!textBeenRead)
+                if (!text1Read1)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                //stage2MiniGameCanvas.enabled = true;
-               // stage2MiniGameCanvas.gameObject.SetActive(true);
-                tadControl.enabled = false;
-                textPanal.SetActive(true);
-                jobotIntroStage2Pond.enabled = true;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    //stage2MiniGameCanvas.enabled = true;
+                    // stage2MiniGameCanvas.gameObject.SetActive(true);
+                    tadControl.enabled = false;
+                    textPanal.SetActive(true);
+                    jobotIntroStage2Pond.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1a.gameObject.SetActive(false);
 
-                TTSJobotStagePond2.gameObject.SetActive(true);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                hint7.gameObject.SetActive(true);
-                progressTextBack.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
+
+                    hint7.gameObject.SetActive(true);
+                    progressTextBack.gameObject.SetActive(false);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+                    text1Read1 = true;
                 }
+              
             }
 
             if (currentStage2PondText == 2)
             {
-                //  pondFrogspawnIntro2
-                tadControl.enabled = false;
-                if (!textBeenRead)
+                if (!text1Read2)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                progressTextBack.gameObject.SetActive(true);
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = true;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
+                    tadControl.enabled = false;
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(true);
 
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(true);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
+                    jobotIntroStage2Pond.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1a.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1b.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+                    text1Read2 = true; 
                 }
+                //  pondFrogspawnIntro2
+               
             }
 
             if (currentStage2PondText == 3)
             {
-                //  pondFrogspawnIntro3
-                tadControl.enabled = false;
-                if (!textBeenRead)
+                if (!text1Read3)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = true;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
+                    //  pondFrogspawnIntro3
+                    tadControl.enabled = false;
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
 
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(true);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
+                    jobotIntroStage2Pond1a.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1b.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1c.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    text1Read3 = true;
                 }
+
             }
 
             if (currentStage2PondText == 4)
             {
-                //  pondFrogspawnIntro4
-                if (!textBeenRead)
+                if (!text1Read4)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                tadControl.enabled = false;
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = true;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
+                    //  pondFrogspawnIntro4
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    tadControl.enabled = false;
 
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(true);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
+                    jobotIntroStage2Pond1b.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1c.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1d.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+                    text1Read4 = true;
                 }
+         
             }
 
             if (currentStage2PondText == 5)
             {
-                //  pondFrogspawnIntro5
-                if (!textBeenRead)
+                if (!text1Read5)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                tadControl.enabled = false;
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = true;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
+                    //  pondFrogspawnIntro5
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
 
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(true);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
+                    jobotIntroStage2Pond1c.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1d.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1e.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+                    text1Read5 = true;
                 }
+               
             }
 
-          /*  if (currentStage2PondText == 6)
-            {
-                //  pondFrogspawnIntro5
-
-                tadControl.enabled = true;
-                textPanal.SetActive(false);
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
-
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-            }
-          */
+     
             if (currentStage2PondText == 6)
             {
-              
-                tadControl.enabled = true;
-                textPanal.SetActive(true);
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = true;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
+                if (!text1Read6)
+                {
+                    tadControl.enabled = true;
+                    textPanal.SetActive(true);
 
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(true);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                progressTextBack.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1d.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1e.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1f.gameObject.SetActive(false);
+
+                    progressTextBack.gameObject.SetActive(false);
+                    progressText.gameObject.SetActive(false);
+
+                    text1Read6 = true;
+                }
+              
 
             }
 
@@ -335,25 +266,11 @@ namespace Alpha.Phases.Robo.Grow
                     progressTextBack.gameObject.SetActive(false);
                     tadControl.enabled = false;
                     textPanal.SetActive(true);
-                    jobotIntroStage2Pond.enabled = false;
-                    jobotIntroStage2Pond1a.enabled = false;
-                    jobotIntroStage2Pond1b.enabled = false;
-                    jobotIntroStage2Pond1c.enabled = false;
-                    jobotIntroStage2Pond1d.enabled = false;
-                    jobotIntroStage2Pond1e.enabled = false;
-                    jobotIntroStage2Pond1f.enabled = true;
-                    jobotIntroStage2Pond1Eaten.enabled = false;
-                    jobotNotLargeEnough.enabled = false;
 
-                    TTSJobotStagePond2.gameObject.SetActive(false);
-                    TTSJobotStagePond2a.gameObject.SetActive(false);
-                    TTSJobotStagePond2b.gameObject.SetActive(false);
-                    TTSJobotStagePond2c.gameObject.SetActive(false);
-                    TTSJobotStagePond2d.gameObject.SetActive(false);
-                    TTSJobotStagePond2e.gameObject.SetActive(false);
-                    TTSJobotStagePond2f.gameObject.SetActive(true);
-                    TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                    TTSJobotNotLargeEnough.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1e.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1f.gameObject.SetActive(true);
+                    jobotIntroStage2Pond1Eaten.gameObject.SetActive(false);
+
                     StartCoroutine(MoveTextPanal());
                     hasEndOfGameHappenedBefore = true;
                     progressText.gameObject.SetActive(false);
@@ -366,54 +283,25 @@ namespace Alpha.Phases.Robo.Grow
             {
                 //  jobotIntroStage1e
                 //tadControl.enabled = false;
+                if (!text1Read8)
+                {
+                    textPanal.SetActive(true);
 
-                textPanal.SetActive(true);
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = true;
-                jobotNotLargeEnough.enabled = false;
+                    jobotIntroStage2Pond1f.gameObject.SetActive(false);
+                    jobotIntroStage2Pond1Eaten.gameObject.SetActive(true);
+                    jobotNotLargeEnough.gameObject.SetActive(false);
 
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(true);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
-                StartCoroutine(CloseTextPanal());
+                    progressText.gameObject.SetActive(false);
+                    StartCoroutine(CloseTextPanal());
+                    text1Read8 = true;
+                }
+              
             }
 
             if (currentStage2PondText == 10)
             {
                 //  End of Pond Stage
-                tadControl.enabled = false;
-                jobotIntroStage2Pond.enabled = false;
-                jobotIntroStage2Pond1a.enabled = false;
-                jobotIntroStage2Pond1b.enabled = false;
-                jobotIntroStage2Pond1c.enabled = false;
-                jobotIntroStage2Pond1d.enabled = false;
-                jobotIntroStage2Pond1e.enabled = false;
-                jobotIntroStage2Pond1f.enabled = false;
-                jobotIntroStage2Pond1Eaten.enabled = false;
-                jobotNotLargeEnough.enabled = false;
-
-                TTSJobotStagePond2.gameObject.SetActive(false);
-                TTSJobotStagePond2a.gameObject.SetActive(false);
-                TTSJobotStagePond2b.gameObject.SetActive(false);
-                TTSJobotStagePond2c.gameObject.SetActive(false);
-                TTSJobotStagePond2d.gameObject.SetActive(false);
-                TTSJobotStagePond2e.gameObject.SetActive(false);
-                TTSJobotStagePond2f.gameObject.SetActive(false);
-                TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                TTSJobotNotLargeEnough.gameObject.SetActive(false);
+             
                 if (!hasTheGameAlreadySaved)
                 {
                     rgMain.task1TextUITick2.SetActive(true);
@@ -426,11 +314,12 @@ namespace Alpha.Phases.Robo.Grow
                     textPanal.SetActive(false);
                     //stage2MiniGameCanvas.enabled = false;
                     ReturnToPlayerCamFromPond();
-                    hasTheGameAlreadySaved = true;
+      
                  
                     waterPondSFX.Stop();
                     music.volume = 0.036f;
                     robotNavMeshAgentToStop.GetComponent<NavMeshAgent>().isStopped = false;
+                    hasTheGameAlreadySaved = true;
                 }
 
 
@@ -446,25 +335,8 @@ namespace Alpha.Phases.Robo.Grow
                {
                     //  End of Pond Stage
                     textPanal.SetActive(true);
-                    jobotIntroStage2Pond.enabled = false;
-                    jobotIntroStage2Pond1a.enabled = false;
-                    jobotIntroStage2Pond1b.enabled = false;
-                    jobotIntroStage2Pond1c.enabled = false;
-                    jobotIntroStage2Pond1d.enabled = false;
-                    jobotIntroStage2Pond1e.enabled = false;
-                    jobotIntroStage2Pond1f.enabled = false;
-                    jobotIntroStage2Pond1Eaten.enabled = false;
                     jobotNotLargeEnough.enabled = true;
-
-                    TTSJobotStagePond2.gameObject.SetActive(false);
-                    TTSJobotStagePond2a.gameObject.SetActive(false);
-                    TTSJobotStagePond2b.gameObject.SetActive(false);
-                    TTSJobotStagePond2c.gameObject.SetActive(false);
-                    TTSJobotStagePond2d.gameObject.SetActive(false);
-                    TTSJobotStagePond2e.gameObject.SetActive(false);
-                    TTSJobotStagePond2f.gameObject.SetActive(false);
-                    TTSJobotStagePond2Eaten.gameObject.SetActive(false);
-                    TTSJobotNotLargeEnough.gameObject.SetActive(true);
+                                       
                     StartCoroutine(CloseTextPanal());
                     progressText.gameObject.SetActive(false);
                     hasTextAppearedYet = true;
@@ -547,6 +419,16 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage2PondText--;
+            text1Read1 = false;
+            text1Read2 = false;
+            text1Read3 = false;
+            text1Read4 = false;
+            text1Read5 = false;
+            text1Read6 = false;
+            text1Read7 = false;
+            text1Read8 = false;
+            text1Read9 = false;
+            text1Read10 = false;
         }
 
         void JobotStage2Pond1()

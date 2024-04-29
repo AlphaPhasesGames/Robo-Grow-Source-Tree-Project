@@ -134,11 +134,11 @@ namespace Alpha.Phases.Robo.Grow
                     progressTextBack.gameObject.SetActive(false);
                     progressText.gameObject.SetActive(false);
                     textPanalToHide.SetActive(true);
-                    MGEndText.enabled = false;
-                    MGEndText1.enabled = false;
-                    MGEndText2.enabled = false;
-                    MGAssesment.enabled = true;
+                    MGEndText.gameObject.SetActive(false);
+                    MGEndText1.gameObject.SetActive(false);
+                    MGEndText2.gameObject.SetActive(false);
                     MGAssesment.gameObject.SetActive(true);
+                    MGAssesment.enabled = true;
 
                     TTSMGEndTextButton1.gameObject.SetActive(false);
                     TTSMGEndTextButton1a.gameObject.SetActive(false);
@@ -160,16 +160,16 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     progressTextBack.gameObject.SetActive(false);
                     textPanalToHide.SetActive(true);
-                    MGEndText.enabled = true;
-                    MGEndText1.enabled = false;
+                    MGEndText.gameObject.SetActive(true);
+                    MGEndText1.gameObject.SetActive(false);
+                    MGAssesment.gameObject.SetActive(false);
 
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
                     TTSMGEndTextButton1.gameObject.SetActive(true);
                     TTSMGEndTextButton1a.gameObject.SetActive(false);
                     TTSMGEndTextButton1b.gameObject.SetActive(false);
                     cocoonToAppearAniml.SetBool("mg1LevelOver", true);
-                    MGAssesment.enabled = false;
-                    MGAssesment.gameObject.SetActive(false);
-                    TTSMGAssesmentButton.gameObject.SetActive(false);
+;
 
                     MGNotBigEnough.enabled = false;
                     TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
@@ -194,10 +194,9 @@ namespace Alpha.Phases.Robo.Grow
 
                     MGAssesment.enabled = false;
                     TTSMGAssesmentButton.gameObject.SetActive(false);
-                    MGAssesment.gameObject.SetActive(false);
-                    MGEndText.enabled = false;
-                    MGEndText1.enabled = true;
-                    MGEndText2.enabled = false;
+                    MGEndText.gameObject.SetActive(false);
+                    MGEndText1.gameObject.SetActive(true);
+                    MGEndText2.gameObject.SetActive(false);
 
                     TTSMGEndTextButton1.gameObject.SetActive(false);
                     TTSMGEndTextButton1a.gameObject.SetActive(true);
@@ -227,9 +226,9 @@ namespace Alpha.Phases.Robo.Grow
                     MGAssesment.enabled = false;
                     TTSMGAssesmentButton.gameObject.SetActive(false);
                     MGAssesment.gameObject.SetActive(false);
-                    MGEndText.enabled = false;
-                    MGEndText1.enabled = false;
-                    MGEndText2.enabled = true;
+                    MGEndText.gameObject.SetActive(false);
+                    MGEndText1.gameObject.SetActive(false);
+                    MGEndText2.gameObject.SetActive(true);
 
                     TTSMGEndTextButton1.gameObject.SetActive(false);
                     TTSMGEndTextButton1a.gameObject.SetActive(false);
@@ -261,9 +260,9 @@ namespace Alpha.Phases.Robo.Grow
                     TTSMGAssesmentButton.gameObject.SetActive(false);
                     MGAssesment.gameObject.SetActive(false);
                     textPanalToHide.SetActive(true);
-                    MGEndText.enabled = false;
-                    MGEndText1.enabled = false;
-                    MGEndText2.enabled = false;
+                    MGEndText.gameObject.SetActive(false);
+                    MGEndText1.gameObject.SetActive(false);
+                    MGEndText2. gameObject.SetActive(false);
 
 
 
@@ -288,9 +287,9 @@ namespace Alpha.Phases.Robo.Grow
                     TTSMGAssesmentButton.gameObject.SetActive(false);
                     MGAssesment.gameObject.SetActive(false);
                     textPanalToHide.SetActive(false);
-                    MGEndText.enabled = false;
-                    MGEndText1.enabled = false;
-                    MGEndText2.enabled = false;
+                    MGEndText.gameObject.SetActive(false);
+                    MGEndText1.gameObject.SetActive(false);
+                    MGEndText2.gameObject.SetActive(false);
 
                     TTSMGEndTextButton1.gameObject.SetActive(false);
                     TTSMGEndTextButton1a.gameObject.SetActive(false);
@@ -475,7 +474,8 @@ namespace Alpha.Phases.Robo.Grow
                     catapillerCamToDisable.enabled = false;
                    
                     currentStage1TreeText = 1;
-                    
+                    text1Read = false;
+                    text2Read = false;
                     cocoonCam.enabled = true;
                     runWrongAnswerOnce = false;
                 }
