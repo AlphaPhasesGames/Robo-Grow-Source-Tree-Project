@@ -589,6 +589,8 @@ namespace Alpha.Phases.Robo.Grow
            
                     jobotStage2PlantSeedb.gameObject.SetActive(false);
                     jobotStage2PlantSeede.gameObject.SetActive(true);
+                    jobotStage2PlantSeede.enabled = true;
+
                     jobotSeedsPlanted.gameObject.SetActive(false);
 
                     if (!progressTextIsShowing)

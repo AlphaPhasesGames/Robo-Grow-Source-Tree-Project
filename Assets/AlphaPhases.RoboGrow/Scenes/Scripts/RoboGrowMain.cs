@@ -1237,7 +1237,7 @@ namespace Alpha.Phases.Robo.Grow
             }
 
              // Debug key to finish stage 1 after removing the plants
-/*
+
             if (Input.GetKeyDown(KeyCode.Y)) // press Y to debug stage 1 complete
             {
                 stage1MinigameComplete = true;
@@ -1251,7 +1251,7 @@ namespace Alpha.Phases.Robo.Grow
 
 
             }
-
+            /*
             // Debug key to finish stage 2 after placing and watering the plants
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -1272,10 +1272,10 @@ namespace Alpha.Phases.Robo.Grow
                 SaveStage2MiniGameComplete();
             }
 */
-            
-        
 
-          
+
+
+
 
 
             JSONNode langs = SharedState.LanguageDefs;

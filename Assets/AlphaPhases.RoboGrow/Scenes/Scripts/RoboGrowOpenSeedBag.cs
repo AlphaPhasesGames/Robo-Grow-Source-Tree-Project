@@ -37,7 +37,7 @@ namespace Alpha.Phases.Robo.Grow
             {
                 if (!onlyShowTextOnce)
                 {
-                    rgTextMan.currentStageOfText = 13;
+                 //   rgTextMan.currentStageOfText = 13;
                     onlyShowTextOnce = true;
                 }
                
