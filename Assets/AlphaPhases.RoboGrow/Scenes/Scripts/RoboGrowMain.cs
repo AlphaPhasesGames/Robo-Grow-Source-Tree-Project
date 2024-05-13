@@ -1251,7 +1251,7 @@ namespace Alpha.Phases.Robo.Grow
 
 
             }
-            /*
+            
             // Debug key to finish stage 2 after placing and watering the plants
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -1263,7 +1263,7 @@ namespace Alpha.Phases.Robo.Grow
             }
 
             // Debug key to finish stage 3 after placing and watering the plants
-
+            /*
             if (Input.GetKeyDown(KeyCode.R))
             {
                 stage3TreeminigGameComplete = true;
