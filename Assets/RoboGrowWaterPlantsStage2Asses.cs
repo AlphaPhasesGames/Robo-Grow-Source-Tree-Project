@@ -1458,11 +1458,6 @@ namespace Alpha.Phases.Robo.Grow
             stage3Text5Read = false;
             stage3Text6Read = false;
             stage3Text7Read = false;
-
-
-
-
-
         }
 
         void OnClickStage4()
