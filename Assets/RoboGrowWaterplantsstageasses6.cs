@@ -184,6 +184,13 @@ namespace Alpha.Phases.Robo.Grow
         //   public GameObject adulthoodIncorrectAnswer;
         //   public GameObject childhoodIncorrectAnswer;
 
+        public bool stage4Text1Read;
+        public bool stage4Text2Read;
+        public bool stage4Text3Read;
+        public bool stage4Text4Read;
+        public bool stage4Text5Read;
+        public bool stage4Text6Read;
+        public bool stage4Text7Read;
 
         public Button TTSJobotPlantAsses6Stage4;
         public Button TTSJobotPlantAsses6aStage4;
@@ -312,18 +319,7 @@ namespace Alpha.Phases.Robo.Grow
             textPanal.SetActive(false);
           
 
-         //   jobotIntroStage3PlantAsses6Stage3.enabled = false;
-          //  jobotIntroStage3PlantAsses6aStage3.enabled = false;
-          ///  jobotIntroStage3PlantAsses6bStage3.enabled = false;
-         ///   jobotIntroStage3PlantAsses6cStage3.enabled = false;
-         //   jobotIntroStage3PlantAsses6dStage3.enabled = false;
-         //   jobotIntroStage3PlantAsses6IncorrectGuessStage3.enabled = false;
-
-            jobotIntroStage2PlantAsses6Stage4.enabled = false;
-            jobotIntroStage2PlantAsses6aStage4.enabled = false;
-            jobotIntroStage2PlantAsses6bStage4.enabled = false;
-            jobotIntroStage2PlantAsses6cCorrectStage4.enabled = false;
-            jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
+         
 
             hangmanGamePanal.gameObject.SetActive(false);
             mazeGamePanal.gameObject.SetActive(false);
@@ -728,170 +724,159 @@ namespace Alpha.Phases.Robo.Grow
             {
                 if (currentStage4TreeText == 1)
                 {
-                    if (!textBeenReadStage4)
+                    if (!stage4Text1Read)
                     {
-                        progressTextStage4.gameObject.SetActive(false);
-                    }
-                    progressTextBackStage4.gameObject.SetActive(false);
-                    robCont.enabled = false;
-                    textPanalStage4.SetActive(true);
-                    limaBean1plantBoxToDisable.enabled = false;
-                    jobotIntroStage2PlantAsses6Stage4.enabled = true;
-                    jobotIntroStage2PlantAsses6aStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6bStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6cCorrectStage4.enabled = false;
+                        if (!textBeenReadStage4)
+                        {
+                            progressTextStage4.gameObject.SetActive(false);
+                        }
+                        progressTextBackStage4.gameObject.SetActive(false);
+                        robCont.enabled = false;
+                        textPanalStage4.SetActive(true);
 
-                    TTSJobotPlantAsses6Stage4.gameObject.SetActive(true);
-                    TTSJobotPlantAsses6aStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6bStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6cCorrectStage4.gameObject.SetActive(false);
+                        susan1plantBoxToDisable.enabled = false;
+                        jobotIntroStage2PlantAsses6Stage4.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses6aStage4.gameObject.SetActive(false);
 
-                    TTSJobotIncorrectGuessStage4.gameObject.SetActive(false);
-                    jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
-                    if (!progressTextIsShowingStage4)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1Stage4());
-                        progressTextIsShowingStage4 = true;
+                        if (!progressTextIsShowingStage4)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar1Stage4());
+                            progressTextIsShowingStage4 = true;
+                        }
+                        stage4Text1Read = true;
                     }
+
                 }
 
                 if (currentStage4TreeText == 2)
                 {
-                    //  pondFrogspawnIntro2
-                    if (!textBeenReadStage4)
+                    if (!stage4Text2Read)
                     {
-                        progressTextStage4.gameObject.SetActive(false);
-                    }
-                    progressTextBackStage4.gameObject.SetActive(true);
-                    //   robCont.enabled = false;
-                    susan1plantBoxToDisable.enabled = false;
-                    jobotIntroStage2PlantAsses6Stage4.enabled = false;
-                    jobotIntroStage2PlantAsses6aStage4.enabled = true;
-                    jobotIntroStage2PlantAsses6bStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6cCorrectStage4.enabled = false;
-                    mazeGamePanal.gameObject.SetActive(true);
-                    TTSJobotPlantAsses6Stage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6aStage4.gameObject.SetActive(true);
-                    TTSJobotPlantAsses6bStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6cCorrectStage4.gameObject.SetActive(false);
+                        //  pondFrogspawnIntro2
+                        if (!textBeenReadStage4)
+                        {
+                            progressTextStage4.gameObject.SetActive(false);
+                        }
+                        progressTextBackStage4.gameObject.SetActive(true);
+                        //   robCont.enabled = false;
+                        susan1plantBoxToDisable.enabled = false;
 
-                    TTSJobotIncorrectGuessStage4.gameObject.SetActive(false);
-                    jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
+                        jobotIntroStage2PlantAsses6Stage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6aStage4.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses6bStage4.gameObject.SetActive(false);
 
-                    if (!progressTextIsShowingStage4)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2Stage4());
-                        progressTextIsShowingStage4 = true;
+                        mazeGamePanal.gameObject.SetActive(true);
+
+                        if (!progressTextIsShowingStage4)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar2Stage4());
+                            progressTextIsShowingStage4 = true;
+                        }
+
+                        stage4Text2Read = true;
                     }
+
                 }
 
                 if (currentStage4TreeText == 3)
                 {
                     //  pondFrogspawnIntro3
+                    if (!stage4Text3Read)
+                    {
+                        progressTextStage4.gameObject.SetActive(false);
 
-                    progressTextStage4.gameObject.SetActive(false);
+                        //    robCont.enabled = false;
 
-                    //    robCont.enabled = false;
-                    jobotIntroStage2PlantAsses6Stage4.enabled = false;
-                    jobotIntroStage2PlantAsses6aStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6bStage4.enabled = true;
-                    jobotIntroStage2PlantAsses6cCorrectStage4.enabled = false;
-                    mazeGamePanal.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses6aStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6bStage4.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses6cCorrectStage4.gameObject.SetActive(false);
+                        mazeGamePanal.gameObject.SetActive(true);
 
-                    TTSJobotPlantAsses6Stage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6aStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6bStage4.gameObject.SetActive(true);
-                    TTSJobotPlantAsses6cCorrectStage4.gameObject.SetActive(false);
 
-                    TTSJobotIncorrectGuessStage4.gameObject.SetActive(false);
-                    jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
 
-                    // deathCorrectAnswerButton.onClick.AddListener(
-                    deathCorrectAnswerButton.onClick.AddListener(CorrectAnswer);
-                    adulthoodIncorrectAnswerButton.onClick.AddListener(IncorrectAnswer);
-                    childhoodIncorrectAnswerButton.onClick.AddListener(IncorrectAnswer);
-                    if (!progressTextIsShowingStage4)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2Stage4());
-                        progressTextIsShowingStage4 = true;
+                        // deathCorrectAnswerButton.onClick.AddListener(
+                        deathCorrectAnswerButton.onClick.AddListener(CorrectAnswer);
+                        adulthoodIncorrectAnswerButton.onClick.AddListener(IncorrectAnswer);
+                        childhoodIncorrectAnswerButton.onClick.AddListener(IncorrectAnswer);
+                        if (!progressTextIsShowingStage4)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar2Stage4());
+                            progressTextIsShowingStage4 = true;
+                        }
+                        stage4Text3Read = true;
                     }
+
                 }
 
                 if (currentStage4TreeText == 4)
                 {
-                    //  pondFrogspawnIntro4
-                    //   robCont.enabled = false;
-                    progressTextStage4.gameObject.SetActive(false);
-                    jobotIntroStage2PlantAsses6Stage4.enabled = false;
-                    jobotIntroStage2PlantAsses6aStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6bStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6cCorrectStage4.enabled = true;
-                    mazeGamePanal.gameObject.SetActive(false);
+                    if (!stage4Text4Read)
+                    {
+                        //  pondFrogspawnIntro4
+                        //   robCont.enabled = false;
+                        progressTextStage4.gameObject.SetActive(false);
 
-                    TTSJobotPlantAsses6Stage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6aStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6bStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6cCorrectStage4.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses6bStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6cCorrectStage4.gameObject.SetActive(true);
+                        mazeGamePanal.gameObject.SetActive(false);
 
-                    TTSJobotIncorrectGuessStage4.gameObject.SetActive(false);
-                    jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
 
-                    waterSeedsStage4.gameObject.SetActive(true);
-                    waterSeedsStage4.enabled = true;
+                        waterSeedsStage4.gameObject.SetActive(true);
+                        waterSeedsStage4.enabled = true;
+                        stage4Text4Read = true;
+                    }
+
                 }
 
                 if (currentStage4TreeText == 5)
                 {
-                    progressTextStage4.gameObject.SetActive(false);
-                    progressTextBackStage4.gameObject.SetActive(false);
-                    //robCont.enabled = false;
-                    jobotIntroStage2PlantAsses6Stage4.enabled = false;
-                    jobotIntroStage2PlantAsses6aStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6bStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6cCorrectStage4.enabled = false;
-
-                    TTSJobotPlantAsses6Stage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6aStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6bStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6cCorrectStage4.gameObject.SetActive(false);
-
-                    TTSJobotIncorrectGuessStage4.gameObject.SetActive(true);
-                    jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = true;
-
-                    if (!playerAlreadyGuessedIncorrectStage4)
+                    if (!stage4Text5Read)
                     {
-                        StartCoroutine(ShowIncorrectGuessStage4());
-                        playerAlreadyGuessedIncorrectStage4 = true;
+                        progressTextStage4.gameObject.SetActive(false);
+                        progressTextBackStage4.gameObject.SetActive(false);
+                        //robCont.enabled = false;
+
+                        jobotIntroStage2PlantAsses6bStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6cCorrectStage4.gameObject.SetActive(false);
+
+                        jobotIntroStage2PlantAsses6IncorrectGuessStage4.gameObject.SetActive(true);
+
+                        if (!playerAlreadyGuessedIncorrectStage4)
+                        {
+                            StartCoroutine(ShowIncorrectGuessStage4());
+                            playerAlreadyGuessedIncorrectStage4 = true;
+                        }
+                        stage4Text5Read = true;
+
                     }
-                   
+
                 }
 
                 if (currentStage4TreeText == 6)
                 {
-                    textPanalStage4.gameObject.SetActive(false);
-                    //  robCont.enabled = true;
-                    jobotIntroStage2PlantAsses6Stage4.enabled = false;
-                    jobotIntroStage2PlantAsses6aStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6bStage4.enabled = false;
-                    jobotIntroStage2PlantAsses6cCorrectStage4.enabled = false;
+                    if (!stage4Text6Read)
+                    {
+                        textPanalStage4.gameObject.SetActive(false);
+                        //  robCont.enabled = true;
+                        jobotIntroStage2PlantAsses6Stage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6aStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6bStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6cCorrectStage4.gameObject.SetActive(false);
 
 
-                    TTSJobotPlantAsses6Stage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6aStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6bStage4.gameObject.SetActive(false);
-                    TTSJobotPlantAsses6cCorrectStage4.gameObject.SetActive(false);
 
-                    TTSJobotIncorrectGuessStage4.gameObject.SetActive(false);
-                    jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
-                    currentStage4TreeText = 0;
-                    textBeenReadStage4 = false;
-                    progressTextIsShowingStage4 = false;
-                    ReturnToPlayerCamFromTree();
-                    waterSeedsStage4.gameObject.SetActive(false);
-                    waterSeedsStage4.enabled = false;
 
+                        TTSJobotIncorrectGuessStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses6IncorrectGuessStage4.enabled = false;
+                        currentStage4TreeText = 0;
+                        textBeenReadStage4 = false;
+                        progressTextIsShowingStage4 = false;
+                        ReturnToPlayerCamFromTree();
+                        waterSeedsStage4.gameObject.SetActive(false);
+                        waterSeedsStage4.enabled = false;
+                        stage4Text6Read = true;
+                    }
                 }
-
             }
 
             if (rgMain.currentGameStage == 5)
@@ -1496,6 +1481,13 @@ namespace Alpha.Phases.Robo.Grow
         {
             currentStage4TreeText--;
             robCont.NewNavmeshStop();
+            stage4Text1Read = false;
+            stage4Text2Read = false;
+            stage4Text3Read = false;
+            stage4Text4Read = false;
+            stage4Text5Read = false;
+            stage4Text6Read = false;
+            stage4Text7Read = false;
         }
 
         //stage 4 functions

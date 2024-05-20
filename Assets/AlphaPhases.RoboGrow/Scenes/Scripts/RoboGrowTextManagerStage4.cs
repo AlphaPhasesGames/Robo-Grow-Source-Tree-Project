@@ -47,6 +47,20 @@ namespace Alpha.Phases.Robo.Grow
         public BoxCollider radish1Box;
         public BoxCollider radish2Box;
 
+        public bool textRead1;
+        public bool textRead2;
+        public bool textRead3;
+        public bool textRead4;
+        public bool textRead5;
+        public bool textRead6;
+        public bool textRead7;
+        public bool textRead8;
+        public bool textRead10;
+        public bool textRead11;
+        public bool textRead12;
+
+
+
 
         public Button TTSJobot1;
         public Button TTSJobot2;
@@ -108,6 +122,7 @@ namespace Alpha.Phases.Robo.Grow
         // Start is called before the first frame update
         void Start()
         {
+            /*
             if (rgMainData.currentGameStage == 4)
             {
                 robotControl.enabled = false;
@@ -143,6 +158,7 @@ namespace Alpha.Phases.Robo.Grow
 
                 TTSJobot13StageComplete.gameObject.SetActive(false);
             }
+            */
         }
 
         // Update is called once per frame
@@ -165,620 +181,289 @@ namespace Alpha.Phases.Robo.Grow
                 //  jobotIntroStage1
                 if (currentStageOfText == 1)
                 {
-                    if (!textBeenRead)
+                    if (!textRead1)
                     {
-                        progressText.gameObject.SetActive(false);
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+                        progressTextBack.gameObject.SetActive(false);
+                        textPanalToHide.SetActive(true);
+
+                        jobotIntroStage1Section1.gameObject.SetActive(true);
+                        jobotIntroStage1Section1a.gameObject.SetActive(false);
+
+                        rgMainData.amountOfStage4FlowersWatered = 0;
+
+                        doorAnim.SetBool("closeDoor", true);
+
+
+                        if (!progressTextIsShowing)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar1());
+                            progressTextIsShowing = true;
+                        }
+                        textRead1 = true;
                     }
-                    progressTextBack.gameObject.SetActive(false);
-                    textPanalToHide.SetActive(true);
-                    jobotIntroStage1Section1.enabled = true;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-              //      jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-              //      jobotIntroStage1Section1g.enabled = false;
-               //     jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-                    rgMainData.amountOfStage4FlowersWatered = 0;
-
-                    doorAnim.SetBool("closeDoor", true);
-                    TTSJobot1.gameObject.SetActive(true);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-             //       TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-             //       TTSJobot8.gameObject.SetActive(false);
-             //       TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
-                    }
+                   
 
                 }
 
                 if (currentStageOfText == 2)
                 {
-                    if (!textBeenRead)
+                    if (!textRead2)
                     {
-                        progressText.gameObject.SetActive(false);
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+                        //  jobotIntroStage1a
+                        progressTextBack.gameObject.SetActive(true);
+
+                        jobotIntroStage1Section1.gameObject.SetActive(false);
+                        jobotIntroStage1Section1a.gameObject.SetActive(true);
+                        jobotIntroStage1Section1b.gameObject.SetActive(false);
+
+                        if (!progressTextIsShowing)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar2());
+                            progressTextIsShowing = true;
+                        }
+                        textRead2 = true;
                     }
-                    //  jobotIntroStage1a
-                    progressTextBack.gameObject.SetActive(true);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = true;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-               //     jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-               //     jobotIntroStage1Section1g.enabled = false;
-               //     jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(true);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-              //      TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-              //      TTSJobot8.gameObject.SetActive(false);
-              //      TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2());
-                        progressTextIsShowing = true;
-                    }
+                   
                 }
 
                 if (currentStageOfText == 3)
                 {
-                    if (!textBeenRead)
+                    if (!textRead3)
                     {
-                        progressText.gameObject.SetActive(false);
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+                        //  jobotIntroStage1b
+
+                        jobotIntroStage1Section1a.gameObject.SetActive(false);
+                        jobotIntroStage1Section1b.gameObject.SetActive(true);
+                        jobotIntroStage1Section1c.gameObject.SetActive(false);
+
+                        if (!progressTextIsShowing)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButton());
+                            progressTextIsShowing = true;
+                        }
+                        textRead3 = true;
                     }
-                    //  jobotIntroStage1b
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = true;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-              //      jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-             //       jobotIntroStage1Section1g.enabled = false;
-             //       jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(true);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-            //        TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-            //        TTSJobot8.gameObject.SetActive(false);
-           //         TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButton());
-                        progressTextIsShowing = true;
-                    }
+                   
                 }
 
                 if (currentStageOfText == 4)
                 {
-                    if (!textBeenRead)
+                    if (!textRead4)
                     {
-                        progressText.gameObject.SetActive(false);
-                    }
-                    //  jobotIntroStage1c
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = true;
-                    jobotIntroStage1Section1d.enabled = false;
-            //        jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-             //       jobotIntroStage1Section1g.enabled = false;
-             //       jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-                    hint11.gameObject.SetActive(true);
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+                        //  jobotIntroStage1c
 
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(true);
-                    TTSJobot5.gameObject.SetActive(false);
-            //        TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-            //        TTSJobot8.gameObject.SetActive(false);
-           //         TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
+                        jobotIntroStage1Section1b.gameObject.SetActive(false);
+                        jobotIntroStage1Section1c.gameObject.SetActive(true);
+                        jobotIntroStage1Section1d.gameObject.SetActive(false);
+                        hint11.gameObject.SetActive(true);
+                             
+                        if (!progressTextIsShowing)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar1());
+                            progressTextIsShowing = true;
+                        }
+                        textRead4 = true;
                     }
+   
                 }
 
                 if (currentStageOfText == 5)
                 {
-                    if (!textBeenRead)
+                    if (!textRead5)
                     {
-                        progressText.gameObject.SetActive(false);
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+                        //  jobotIntroStage1d
+
+                        jobotIntroStage1Section1c.gameObject.SetActive(false);
+                        jobotIntroStage1Section1d.gameObject.SetActive(true);
+                        //      jobotIntroStage1Section1e.enabled = false;
+                        jobotIntroStage1Section1f.gameObject.SetActive(false);
+
+                        if (!progressTextIsShowing)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar2());
+                            progressTextIsShowing = true;
+                        }
+                        textRead5 = true;
                     }
-                    //  jobotIntroStage1d
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = true;
-              //      jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-             //       jobotIntroStage1Section1g.enabled = false;
-            //       jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(true);
-             //       TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-             //       TTSJobot8.gameObject.SetActive(false);
-             //       TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2());
-                        progressTextIsShowing = true;
-                    }
+ 
                 }
-                /*
+          
                 if (currentStageOfText == 6)
                 {
-                    if (!textBeenRead)
+                    if (!textRead6)
                     {
-                        progressText.gameObject.SetActive(false);
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+                        //  jobotIntroStage1f
+
+                        jobotIntroStage1Section1d.gameObject.SetActive(false);
+                        jobotIntroStage1Section1f.gameObject.SetActive(true);
+                        jobotIntroStage1Section1i.gameObject.SetActive(false);
+
+                        if (!progressTextIsShowing)
+                        { // 3 second delay
+                            StartCoroutine(DelayProgressButtonVar2());
+                            progressTextIsShowing = true;
+                        }
+                        textRead6 = true;
                     }
-                    //  jobotIntroStage1e
-
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                    jobotIntroStage1Section1e.enabled = true;
-                    jobotIntroStage1Section1f.enabled = false;
-                    jobotIntroStage1Section1g.enabled = false;
-                    jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-                    TTSJobot6.gameObject.SetActive(true);
-                    TTSJobot7.gameObject.SetActive(false);
-                    TTSJobot8.gameObject.SetActive(false);
-                    TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
-                    }
-                }
-                */
-                if (currentStageOfText == 6)
-                {
-                    if (!textBeenRead)
-                    {
-                        progressText.gameObject.SetActive(false);
-                    }
-                    //  jobotIntroStage1f
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                //    jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = true;
-               //     jobotIntroStage1Section1g.enabled = false;
-               //     jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-             //       TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(true);
-             //       TTSJobot8.gameObject.SetActive(false);
-             //       TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar2());
-                        progressTextIsShowing = true;
-                    }
-                }
-/*
-                if (currentStageOfText == 8)
-                {
-                    if (!textBeenRead)
-                    {
-                        progressText.gameObject.SetActive(false);
-                    }
-                    //  jobotIntroStage1g
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-             //       jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-             //       jobotIntroStage1Section1g.enabled = true;
-            //        jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-                    TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-                    TTSJobot8.gameObject.SetActive(true);
-                    TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                                        if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
-                    }
+                
                 }
 
-                if (currentStageOfText == 9)
-                {
-                    if (!textBeenRead)
-                    {
-                        progressText.gameObject.SetActive(false);
-                    }
-                    //  jobotIntroStage1h
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                    jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-                    jobotIntroStage1Section1g.enabled = false;
-                    jobotIntroStage1Section1h.enabled = true;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-                    TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-                    TTSJobot8.gameObject.SetActive(false);
-                    TTSJobot9.gameObject.SetActive(true);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-                    hint12.gameObject.SetActive(true);
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    doorAnim.SetBool("doorNeedsToBeOpen", false);
-                    doorAnim.SetBool("closeDoor", false);
-                    doorAnim.SetTrigger("resetDoorValues");
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
-                    }
-                }
-*/
                 if (currentStageOfText == 7)
                 { //  jobotIntroStage1i
-                    if (!textBeenRead)
+                    if (!textRead7)
                     {
+                        if (!textBeenRead)
+                        {
+                            progressText.gameObject.SetActive(false);
+                        }
+
+                        jobotIntroStage1Section1f.gameObject.SetActive(false);
+                        //     jobotIntroStage1Section1g.enabled = false;
+                        //    jobotIntroStage1Section1h.enabled = false;
+                        jobotIntroStage1Section1i.gameObject.SetActive(true);
+                        jobotIntroStagejobotStage4PlantWatered1.gameObject.SetActive(false);
+
+                        camZoomOutAnim.SetBool("startStage1PlayerCamZoomOut", true);
+                        //   rgMainData.SavePlayerPos();
+                        // playerCameraToEnable.SetActive(true);
+                        playerCameraToEnableCamera.enabled = true;
+                        mainCameraToDisable.enabled = false;
+                        stage3EndToDisable.enabled = false;
+                        stage2EndToDisable.enabled = false;
+                        //  StartCoroutine(CloseText());
+                        playerRobotToShow.SetActive(true);
+                        robotToHide.SetActive(false);
+                        robotControl.enabled = true;
+                        robotAnim.keepAnimatorControllerStateOnDisable = false;
+                        robotAnim.enabled = false;
+
+                        help.enabled = true;
+                        tasks.enabled = true;
+
+                        if (!hasLevelSavedAlready)
+                        {
+                            rgMainData.MoveToLevel4();
+                            rgMainData.introStage4Complete = true;
+                            rgMainData.SaveIntroCompleteStage4();
+                            susan1Box.enabled = true;
+                            susan2Box.enabled = true;
+                            lima1Box.enabled = true;
+                            lima2Box.enabled = true;
+                            daisy1Box.enabled = true;
+                            daisy2Box.enabled = true;
+                            radish1Box.enabled = true;
+                            radish2Box.enabled = true;
+
+                            hasLevelSavedAlready = true;
+                        }
+
                         progressText.gameObject.SetActive(false);
+                        StartCoroutine(DisableAllAnims());
+                        StartCoroutine(ResetDoor());
+                        StartCoroutine(CloseText());
+                        textRead7 = true;
                     }
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                //    jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-               //     jobotIntroStage1Section1g.enabled = false;
-                //    jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = true;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
-
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-               //     TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-               //     TTSJobot8.gameObject.SetActive(false);
-               //     TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(true);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-
-                    camZoomOutAnim.SetBool("startStage1PlayerCamZoomOut", true);
-                    //   rgMainData.SavePlayerPos();
-                   // playerCameraToEnable.SetActive(true);
-                    playerCameraToEnableCamera.enabled = true;
-                    mainCameraToDisable.enabled = false;
-                    stage3EndToDisable.enabled = false;
-                    stage2EndToDisable.enabled = false;
-                    //  StartCoroutine(CloseText());
-                    playerRobotToShow.SetActive(true);
-                    robotToHide.SetActive(false);
-                    robotControl.enabled = true;
-                    robotAnim.keepAnimatorControllerStateOnDisable = false;
-                    robotAnim.enabled = false;
-
-                    help.enabled = true;
-                    tasks.enabled = true;
-
-                    if (!hasLevelSavedAlready)
-                    {
-                        rgMainData.MoveToLevel4();
-                        rgMainData.introStage4Complete = true;
-                        rgMainData.SaveIntroCompleteStage4();
-                        susan1Box.enabled = true;
-                        susan2Box.enabled = true;
-                        lima1Box.enabled = true;
-                        lima2Box.enabled = true;
-                        daisy1Box.enabled = true;
-                        daisy2Box.enabled = true;
-                        radish1Box.enabled = true;
-                        radish2Box.enabled = true;
-
-                        hasLevelSavedAlready = true;
-                    }
-
-                    progressText.gameObject.SetActive(false);
-                    StartCoroutine(DisableAllAnims());
-                    StartCoroutine(ResetDoor());
-                    StartCoroutine(CloseText());
                 }
 
                 // off
 
                 if (currentStageOfText == 11)
                 {
-                    //  jobotIntroStage1h
-                    textPanalToHide.SetActive(false);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-             //       jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-             //       jobotIntroStage1Section1g.enabled = false;
-             //       jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
+                    if (!textRead12)
+                    {
+                        //  jobotIntroStage1h
+                        textPanalToHide.SetActive(false);
+                        jobotIntroStage1Section1.gameObject.SetActive(false);
+                        jobotIntroStage1Section1a.gameObject.SetActive(false);
+                        jobotIntroStage1Section1b.gameObject.SetActive(false);
+                        jobotIntroStage1Section1c.gameObject.SetActive(false);
+                        jobotIntroStage1Section1d.gameObject.SetActive(false);
+                        //       jobotIntroStage1Section1e.enabled = false;
+                        jobotIntroStage1Section1f.gameObject.SetActive(false);
+                        //       jobotIntroStage1Section1g.enabled = false;
+                        //       jobotIntroStage1Section1h.enabled = false;
+                        jobotIntroStage1Section1i.gameObject.SetActive(false);
+                        jobotIntroStagejobotStage4PlantWatered1.gameObject.SetActive(false);
+                        jobotIntroStagejobotStage4PlantWatered2.gameObject.SetActive(false);
 
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-          //          TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-          //          TTSJobot8.gameObject.SetActive(false);
-          //          TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
+               
+                        jobotStageComplete.enabled = false;
+                        textRead12 = true;
+                    }
+         
                 }
 
                 if (currentStageOfText == 12)
                 {
-                    textPanalToHide.SetActive(true);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-         //           jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-          //          jobotIntroStage1Section1g.enabled = false;
-        //            jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = true;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
+                    if (!textRead11)
+                    {
+                        textPanalToHide.SetActive(true);
 
+                        jobotIntroStage1Section1i.enabled = false;
+                        jobotIntroStagejobotStage4PlantWatered1.gameObject.SetActive(true);
+                        jobotIntroStagejobotStage4PlantWatered2.gameObject.SetActive(false);
 
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-           //         TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-           //         TTSJobot8.gameObject.SetActive(false);
-           //         TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(true);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
+                        StartCoroutine(CloseText());
+                        textRead11 = true;
+                    }
 
-                    TTSJobot13StageComplete.gameObject.SetActive(false);
-                    jobotStageComplete.enabled = false;
-                    StartCoroutine(CloseText());
+                   
                 }
 
                 if (currentStageOfText == 13)
                 {
-                    textPanalToHide.SetActive(true);
-                    progressText.gameObject.SetActive(false);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-            //        jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-            //        jobotIntroStage1Section1g.enabled = false;
-            //        jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = true;
+                    if (!textRead8)
+                    {
+                        textPanalToHide.SetActive(true);
+                        progressText.gameObject.SetActive(false);
 
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-          //          TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-           //         TTSJobot8.gameObject.SetActive(false);
-           //         TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(true);
-                    StartCoroutine(CloseText());
+                        jobotIntroStagejobotStage4PlantWatered1.gameObject.SetActive(false);
+                        jobotIntroStagejobotStage4PlantWatered2.gameObject.SetActive(true);
+                                         
+                        StartCoroutine(CloseText());
+                        textRead8 = true;
+                    }
+                   
                 }
 
                 if (currentStageOfText == 14)
                 {
-                    textPanalToHide.SetActive(true);
-                    progressText.gameObject.SetActive(false);
-                    progressTextBack.gameObject.SetActive(false);
-                    jobotIntroStage1Section1.enabled = false;
-                    jobotIntroStage1Section1a.enabled = false;
-                    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-           //         jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-          //          jobotIntroStage1Section1g.enabled = false;
-          //          jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered1.enabled = false;
-                    jobotIntroStagejobotStage4PlantWatered2.enabled = false;
+                    if (!textRead10)
+                    {
+                        textPanalToHide.SetActive(true);
+                        progressText.gameObject.SetActive(false);
+                        progressTextBack.gameObject.SetActive(false);
+                    
+                        jobotStageComplete.gameObject.SetActive(true);
 
-
-                    TTSJobot1.gameObject.SetActive(false);
-                    TTSJobot2.gameObject.SetActive(false);
-                    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-         //           TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-         //           TTSJobot8.gameObject.SetActive(false);
-         //           TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobot11FlowerWatered1.gameObject.SetActive(false);
-                    TTSJobot12FlowerWatered2.gameObject.SetActive(false);
-
-                    TTSJobot13StageComplete.gameObject.SetActive(true);
-                    jobotStageComplete.enabled = true;
-
-                    StartCoroutine(CloseText());
+                        StartCoroutine(CloseText());
+                        textRead10 = true;
+                    }
+                  
                 }
 
             }
@@ -793,6 +478,18 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStageOfText--;
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
+            textRead5 = false;
+            textRead6 = false;
+            textRead7 = false;
+            textRead8 = false;
+           // textRead9 = false;
+            textRead10 = false;
+            textRead11 = false;
+            textRead12 = false;
         }
 
         void JobotStage4Section1()
@@ -862,6 +559,7 @@ namespace Alpha.Phases.Robo.Grow
         public IEnumerator CloseText()
         {
             yield return new WaitForSeconds(4);
+            textRead12 = false;
             currentStageOfText = 11;
         }
 

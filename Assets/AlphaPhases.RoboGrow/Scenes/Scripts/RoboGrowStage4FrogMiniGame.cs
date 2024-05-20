@@ -58,6 +58,19 @@ namespace Alpha.Phases.Robo.Grow
         public Button TTSJobotStage4Frogf;
         public Button TTSJobotStage4FrogEaten;
 
+        public bool textRead1;
+        public bool textRead2;
+        public bool textRead3;
+        public bool textRead4;
+        public bool textRead5;
+        public bool textRead6;
+        public bool textRead7;
+        public bool textRead8;
+        public bool textRead9;
+        public bool textRead10;
+        public bool textRead11;
+        public bool textRead12;
+
         public BoxCollider frogStopper1;
         public BoxCollider frogStopper2;
         public BoxCollider frogStopper3;
@@ -100,30 +113,7 @@ namespace Alpha.Phases.Robo.Grow
         // Start is called before the first frame update
         void Start()
         {
-            textPanal.SetActive(false);
-            jobotJobotStage4FrogText.enabled = false;
-            jobotJobotStage4FrogTexta.enabled = false;
-            jobotJobotStage4FrogTextaControls.enabled = false;
-            jobotJobotStage4FrogTextb.enabled = false;
-            jobotJobotStage4FrogTextc.enabled = false;
-            jobotJobotStage4FrogTextd.enabled = false;
-            jobotJobotStage4FrogTextdCloser.enabled = false;
-            jobotJobotStage4FrogTexte.enabled = false;
-            jobotJobotStage4FrogTextf.enabled = false;
-
-
-            TTSJobotStage4Frog.gameObject.SetActive (false);
-            TTSJobotStage4Froga.gameObject.SetActive(false);
-            TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-            TTSJobotStage4Frogb.gameObject.SetActive(false);
-            TTSJobotStage4Frogc.gameObject.SetActive(false);
-            TTSJobotStage4Frogd.gameObject.SetActive(false);
-            TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-            TTSJobotStage4Froge.gameObject.SetActive(false);
-            TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-            jobotJobotStage4Eaten.enabled = false;
-            TTSJobotStage4FrogEaten.gameObject.SetActive(false);
+       
 
         }
 
@@ -133,445 +123,302 @@ namespace Alpha.Phases.Robo.Grow
 
             if (currentStage3FrogText == 1)
             {
-                if (!textBeenRead)
+                if (!textRead1)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(false);
+                    frogLevelItems.SetActive(true);
+                    textPanal.SetActive(true);
+                    frogCharacter.gameObject.SetActive(true);
+                    rgFrogCont.enabled = false;
+                    frogCroak.Play();
+                    musicToStop.Stop();
+                    robCont.enabled = false;
+                    playerCamera.enabled = false;
+                    jobotJobotStage4FrogText.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTexta.gameObject.SetActive(false);
+
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+                    textRead1 = true;
                 }
-                progressTextBack.gameObject.SetActive(false);
-                frogLevelItems.SetActive(true);
-                textPanal.SetActive(true);
-                frogCharacter.gameObject.SetActive(true);
-                rgFrogCont.enabled = false;
-                frogCroak.Play();
-                musicToStop.Stop();
-                robCont.enabled = false;
-                playerCamera.enabled = false;
-                jobotJobotStage4FrogText.enabled = true;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-                TTSJobotStage4Frog.gameObject.SetActive(true);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
-                }
+  
             }
 
             if (currentStage3FrogText == 2)
             {
-                if (!textBeenRead)
+                if (!textRead2)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    progressTextBack.gameObject.SetActive(true);
+
+                    jobotJobotStage4FrogText.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTexta.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextaControls.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+
+                    textRead2 = true;
                 }
-                progressTextBack.gameObject.SetActive(true);
-
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = true;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(true);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
-                }
+               
             }
 
             if (currentStage3FrogText == 3)
             {
-                if (!textBeenRead)
+                if (!textRead3) 
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+
+                    jobotJobotStage4FrogTexta.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextaControls.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextb.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+                    textRead3 = true;
                 }
-
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = true;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(true);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
-                }
+               
             }
 
             if (currentStage3FrogText == 4)
             {
-                if (!textBeenRead)
+                if (!textRead4)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+
+                    jobotJobotStage4FrogTextaControls.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextb.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+
+                    textRead4 = true;
                 }
-
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = true;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(true);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
-                }
+           
             }
 
             if (currentStage3FrogText == 5)
             {
-               
+                if (!textRead5)
+                {
 
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = true;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
+                    jobotJobotStage4FrogTextb.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextd.gameObject.SetActive(false);
 
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(true);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
+                    rgFrogCont.enabled = true;
+                    progressTextBack.gameObject.SetActive(false);
+                    progressText.gameObject.SetActive(false);
+                    // StartCoroutine(CloseTextPanal());
 
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
+                    textRead5 = true;
+                }
 
-                rgFrogCont.enabled = true;
-                progressTextBack.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
-               // StartCoroutine(CloseTextPanal());
             }
 
             if (currentStage3FrogText == 6)
             {
-               
-                textPanal.SetActive(true);
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = true;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
+                if (!textRead6)
+                {
+                    textPanal.SetActive(true);
 
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(true);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextd.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
 
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
+                    textRead6 = true;
+                    // StartCoroutine(CloseTextPanal());
+                }
 
-                // StartCoroutine(CloseTextPanal());
             }
 
             if (currentStage3FrogText == 7)
             {
-               
-                textPanal.SetActive(true);
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = true;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
+                if (!textRead7)
+                {
+                    textPanal.SetActive(true);
+                    jobotJobotStage4FrogText.enabled = false;
 
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(true);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextd.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextdCloser.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTexte.gameObject.SetActive(false);
 
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-
-
-                StartCoroutine(CloseTextPanal());
+                    StartCoroutine(CloseTextPanal());
+                    textRead7 = true;
+                }
+              
 
             }
 
             if (currentStage3FrogText == 8)
             {
-                if (!textBeenRead)
+                if (!textRead8)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    textPanal.SetActive(true);
+                    rgFrogCont.enabled = false;
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTexte.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextf.gameObject.SetActive(false);
+
+                    progressText.gameObject.SetActive(true);
+                    textRead8 = true;
                 }
-                textPanal.SetActive(true);
-                rgFrogCont.enabled = false;
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = true;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(true);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-
-
-                progressText.gameObject.SetActive(true);
+              
             }
 
             if (currentStage3FrogText == 9)
             {
-
-                if (!textBeenRead)
+                if (!textRead9)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTexte.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextf.gameObject.SetActive(true);
+
+                    StartCoroutine(CloseTextFinalTime());
+                    textRead9 = true;
                 }
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = true;
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(true);
-                progressText.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-
-
-                StartCoroutine(CloseTextFinalTime());
+            
             }
 
             if (currentStage3FrogText == 10)
             {
-               
-                textPanal.SetActive(false);
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
+                if (!textRead10)
+                {
+                    textPanal.SetActive(false);
+                    jobotJobotStage4FrogText.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTexta.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextaControls.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextb.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextd.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTexte.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextf.gameObject.SetActive(false);
 
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
+                    TTSJobotStage4Frog.gameObject.SetActive(false);
+                    TTSJobotStage4Froga.gameObject.SetActive(false);
+                    TTSJobotStage4FrogaControls.gameObject.SetActive(false);
+                    TTSJobotStage4Frogb.gameObject.SetActive(false);
+                    TTSJobotStage4Frogc.gameObject.SetActive(false);
+                    TTSJobotStage4Frogd.gameObject.SetActive(false);
+                    TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
+                    TTSJobotStage4Froge.gameObject.SetActive(false);
+                    TTSJobotStage4Frogf.gameObject.SetActive(false);
 
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
+                    jobotJobotStage4Eaten.gameObject.SetActive(false);
+                    TTSJobotStage4FrogEaten.gameObject.SetActive(false);
 
-
+                    textRead10 = true;
+                }
+             
             }
 
 
             if (currentStage3FrogText == 11)
             {
-
-                textPanal.SetActive(false);
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-
-                jobotJobotStage4Eaten.enabled = false;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(false);
-
-
-                frogCharacter.gameObject.SetActive(false);
-                rgFrogCont.enabled = false;
-                frogCroak.Stop();
-                musicToStop.Play();
-
-                susanArrowToReset.SetActive(true);
-                susan2ArrowToReset.SetActive(true);
-                lima2ArrowToReset.SetActive(true);
-                limaArrowToReset.SetActive(true);
-                daisyArrowToReset.SetActive(true);
-                daisy2ArrowToReset.SetActive(true);
-                radishArrowToReset.SetActive(true);
-                radish2ArrowToReset.SetActive(true);
-                // playerCamera.enabled = true;
-                frogLevelItems.SetActive(false);
-                if (!hasSavingHappenBefore)
+                if (!textRead11)
                 {
-                    playerCamera.gameObject.SetActive(true);
-                    playerCamera.enabled = true;
-                    robCont.enabled = true;
-                    rgMain.SaveStage4FrogMiniGameComplete();
-                    rgMain.SavePlayerPos();
-                    hasSavingHappenBefore = true;
-                    mainCam.enabled = false;
-                    triggerArrow.SetActive(false);
-                    robotNavMeshAgentToStop.GetComponent<NavMeshAgent>().isStopped = false;
+                    textPanal.SetActive(false);
+                    jobotJobotStage4FrogText.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTexta.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextaControls.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextb.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextd.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTexte.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextf.gameObject.SetActive(false);
+
+
+                    jobotJobotStage4Eaten.gameObject.SetActive(false);
+
+
+                    frogCharacter.gameObject.SetActive(false);
+                    rgFrogCont.enabled = false;
+                    frogCroak.Stop();
+                    musicToStop.Play();
+
+                    susanArrowToReset.SetActive(true);
+                    susan2ArrowToReset.SetActive(true);
+                    lima2ArrowToReset.SetActive(true);
+                    limaArrowToReset.SetActive(true);
+                    daisyArrowToReset.SetActive(true);
+                    daisy2ArrowToReset.SetActive(true);
+                    radishArrowToReset.SetActive(true);
+                    radish2ArrowToReset.SetActive(true);
+                    // playerCamera.enabled = true;
+                    frogLevelItems.SetActive(false);
+                    if (!hasSavingHappenBefore)
+                    {
+                        playerCamera.gameObject.SetActive(true);
+                        playerCamera.enabled = true;
+                        robCont.enabled = true;
+                        rgMain.SaveStage4FrogMiniGameComplete();
+                        rgMain.SavePlayerPos();
+                        hasSavingHappenBefore = true;
+                        mainCam.enabled = false;
+                        triggerArrow.SetActive(false);
+                        robotNavMeshAgentToStop.GetComponent<NavMeshAgent>().isStopped = false;
+                    }
+                    textRead11 = true;
                 }
+  
                
             }
 
             if (currentStage3FrogText == 12)
             {
+                if (!textRead12)
+                {
+                    textPanal.SetActive(true);
 
-                textPanal.SetActive(true);
-                jobotJobotStage4FrogText.enabled = false;
-                jobotJobotStage4FrogTexta.enabled = false;
-                jobotJobotStage4FrogTextaControls.enabled = false;
-                jobotJobotStage4FrogTextb.enabled = false;
-                jobotJobotStage4FrogTextc.enabled = false;
-                jobotJobotStage4FrogTextd.enabled = false;
-                jobotJobotStage4FrogTextdCloser.enabled = false;
-                jobotJobotStage4FrogTexte.enabled = false;
-                jobotJobotStage4FrogTextf.enabled = false;
-
-                TTSJobotStage4Frog.gameObject.SetActive(false);
-                TTSJobotStage4Froga.gameObject.SetActive(false);
-                TTSJobotStage4FrogaControls.gameObject.SetActive(false);
-                TTSJobotStage4Frogb.gameObject.SetActive(false);
-                TTSJobotStage4Frogc.gameObject.SetActive(false);
-                TTSJobotStage4Frogd.gameObject.SetActive(false);
-                TTSJobotStage4FrogdCloser.gameObject.SetActive(false);
-                TTSJobotStage4Froge.gameObject.SetActive(false);
-                TTSJobotStage4Frogf.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
-                //rgFrogCont.enabled = false;
-                jobotJobotStage4Eaten.enabled = true;
-                TTSJobotStage4FrogEaten.gameObject.SetActive(true);
+                    progressText.gameObject.SetActive(false);
+                    //rgFrogCont.enabled = false;
+                    jobotJobotStage4Eaten.gameObject.SetActive(true);
+                    TTSJobotStage4FrogEaten.gameObject.SetActive(true);
 
 
-                StartCoroutine(CloseTextPanal());
+                    StartCoroutine(CloseTextPanal());
+                    textRead12 = true;
+                }
+              
             }
 
         }
@@ -621,6 +468,19 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage3FrogText--;
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
+            textRead5 = false;
+            textRead6 = false;
+            textRead7 = false;
+            textRead8 = false;
+            textRead9 = false;
+            textRead10 = false;
+            textRead11 = false;
+            textRead12 = false;
+
         }
 
         void JobotStage4FrogMG1()
@@ -679,6 +539,7 @@ namespace Alpha.Phases.Robo.Grow
         public IEnumerator CloseTextPanal()
         {
             yield return new WaitForSeconds(3);
+            textRead5 = false;
             currentStage3FrogText = 5;
 
         }
@@ -686,6 +547,7 @@ namespace Alpha.Phases.Robo.Grow
         public IEnumerator CloseTextFinalTime()
         {
             yield return new WaitForSeconds(5);
+            textRead11 = false;
             currentStage3FrogText = 11;
 
         }
