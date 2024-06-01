@@ -127,6 +127,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant2DaisyText1");
+
                 robCont.enabled = false;
                 jobotIntroStage1Flower3DaisyPlant1.enabled = true;
                 jobotIntroStage1Flower3DaisyPlant2.enabled = false;
@@ -154,6 +156,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant2DaisyText1a");
+
                 progressTextBack.gameObject.SetActive(true);
                 jobotIntroStage1Flower3DaisyPlant1.enabled = false;
                 jobotIntroStage1Flower3DaisyPlant2.enabled = true;
@@ -182,7 +186,8 @@ namespace Alpha.Phases.Robo.Grow
             if (currentStage1FlowerDaisyPlantText == 3)
             {
 
-               
+                LOLSDK.Instance.SpeakText("stage1Plant2DaisyTextb");
+
                 jobotIntroStage1Flower3DaisyPlant1.enabled = false;
                 jobotIntroStage1Flower3DaisyPlant2.enabled = false;
                 jobotIntroStage1Flower3DaisyPlant3.enabled = true;
@@ -217,6 +222,7 @@ namespace Alpha.Phases.Robo.Grow
                 TTSJobotFlower3DaisyPlant1.gameObject.SetActive(false);
                 TTSJobotFlower3DaisyPlant2.gameObject.SetActive(false);
                 TTSJobotFlower3DaisyPlant3.gameObject.SetActive(false);
+                LOLSDK.Instance.SpeakText("assesmentSection1AnswerCorrect");
 
                 jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(true);
                 jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
@@ -277,6 +283,7 @@ namespace Alpha.Phases.Robo.Grow
                 TTSJobotFlower3DaisyPlant1.gameObject.SetActive(false);
                 TTSJobotFlower3DaisyPlant2.gameObject.SetActive(false);
                 TTSJobotFlower3DaisyPlant3.gameObject.SetActive(false);
+                LOLSDK.Instance.SpeakText("assesmentSection1AnswerIncorrect");
 
                 jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
                 jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);

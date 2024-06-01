@@ -127,6 +127,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant3LimaBText1");
+
                 robCont.enabled = false;
                 jobotIntroStage1FlowerLimaBean1.enabled = true;
                 jobotIntroStage1FlowerLimaBean2.enabled = false;
@@ -155,6 +157,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant3LimaBText1a");
+
                 jobotIntroStage1FlowerLimaBean1.enabled = false;
                 jobotIntroStage1FlowerLimaBean2.enabled = true;
                 jobotIntroStage1FlowerLimaBean3.enabled = false;
@@ -183,6 +187,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant3LimaBTextb");
+
                 jobotIntroStage1FlowerLimaBean1.enabled = false;
                 jobotIntroStage1FlowerLimaBean2.enabled = false;
                 jobotIntroStage1FlowerLimaBean3.enabled = true;
@@ -212,6 +218,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("assesmentSection1AnswerCorrect");
+
                 textPanal.gameObject.SetActive(true);
                 jobotIntroStage1FlowerLimaBean1.enabled = false;
                 jobotIntroStage1FlowerLimaBean2.enabled = false;
@@ -284,6 +292,8 @@ namespace Alpha.Phases.Robo.Grow
             if (currentStage1FlowerLimaBeanText == 7)
             {
                 textPanal.gameObject.SetActive(true);
+                LOLSDK.Instance.SpeakText("assesmentSection1AnswerIncorrect");
+
                 jobotIntroStage1FlowerLimaBean1.enabled = false;
                 jobotIntroStage1FlowerLimaBean2.enabled = false;
                 jobotIntroStage1FlowerLimaBean3.enabled = false;

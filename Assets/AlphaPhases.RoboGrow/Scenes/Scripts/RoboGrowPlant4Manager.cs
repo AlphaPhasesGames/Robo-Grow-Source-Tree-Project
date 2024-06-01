@@ -121,6 +121,8 @@ namespace Alpha.Phases.Robo.Grow
                     hasTextBeenSpoken = true;
 
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant4RadishText1");
+
                 removeDeadPlants.gameObject.SetActive(false);
                 progressTextBack.gameObject.SetActive(false);
                 robCont.enabled = false;
@@ -150,6 +152,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressText.gameObject.SetActive(false);
                 }
+                LOLSDK.Instance.SpeakText("stage1Plant4RadishText1a");
+
                 jobotIntroStage1Flower3RadishPlant1.enabled = false;
                 jobotIntroStage1Flower3RadishPlant2.enabled = true;
                 jobotIntroStage1Flower3RadishPlant3.enabled = false;
@@ -174,6 +178,7 @@ namespace Alpha.Phases.Robo.Grow
 
             if (currentStage1FlowerRadishPlantText == 3)
             {
+                LOLSDK.Instance.SpeakText("stage1Plant4RadishText1b");
 
                 jobotIntroStage1Flower3RadishPlant1.enabled = false;
                 jobotIntroStage1Flower3RadishPlant2.enabled = false;
@@ -213,6 +218,7 @@ namespace Alpha.Phases.Robo.Grow
                 TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
                 TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
                 TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
+                LOLSDK.Instance.SpeakText("assesmentSection1AnswerCorrect");
 
                 jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(true);
                 jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
@@ -273,6 +279,7 @@ namespace Alpha.Phases.Robo.Grow
                 TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
                 TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
                 TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
+                LOLSDK.Instance.SpeakText("assesmentSection1AnswerIncorrect");
 
                 jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
                 jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);

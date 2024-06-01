@@ -702,6 +702,10 @@ namespace Alpha.Phases.Robo.Grow
                     //robotAnim.enabled = true;
                                     
                     TTSStage2Complete.gameObject.SetActive(true);
+                    jobotStage2PlantSeed.gameObject.SetActive(false);
+                    jobotStage2PlantSeeda.gameObject.SetActive(false);
+                    jobotStage2PlantSeedb.gameObject.SetActive(false);
+                    jobotStage2PlantSeede.gameObject.SetActive(false);
                     stage2Complete.gameObject.SetActive(true);
                     StartCoroutine(HideText());
                 }

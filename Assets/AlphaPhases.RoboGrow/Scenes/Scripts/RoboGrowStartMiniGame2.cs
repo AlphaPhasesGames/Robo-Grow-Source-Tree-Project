@@ -503,6 +503,8 @@ namespace Alpha.Phases.Robo.Grow
         {
             currentStage2PondText = 9;
             yield return new WaitForSeconds(2);
+            text1Read6 = false;
+            //tadControl.enabled = true;
             currentStage2PondText = 6;
         }
 

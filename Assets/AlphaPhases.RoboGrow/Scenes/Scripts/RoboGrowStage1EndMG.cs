@@ -124,6 +124,7 @@ namespace Alpha.Phases.Robo.Grow
                 if (!text1Read)
                 {
                     stageLabels.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameAssesmentSection");
 
                     eggItemButton.gameObject.SetActive(true);
                     larvaItemButton.gameObject.SetActive(true);
@@ -158,6 +159,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("stage1MiniGameCompleteInfo");
+
                     progressTextBack.gameObject.SetActive(false);
                     textPanalToHide.SetActive(true);
                     MGEndText.gameObject.SetActive(true);
@@ -191,6 +194,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameCompleteInfoa");
 
                     MGAssesment.enabled = false;
                     TTSMGAssesmentButton.gameObject.SetActive(false);
@@ -223,6 +227,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("stage1MiniGameCompleteInfob");
+
                     MGAssesment.enabled = false;
                     TTSMGAssesmentButton.gameObject.SetActive(false);
                     MGAssesment.gameObject.SetActive(false);
@@ -256,33 +262,11 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    MGAssesment.enabled = false;
-                    TTSMGAssesmentButton.gameObject.SetActive(false);
-                    MGAssesment.gameObject.SetActive(false);
-                    textPanalToHide.SetActive(true);
-                    MGEndText.gameObject.SetActive(false);
-                    MGEndText1.gameObject.SetActive(false);
-                    MGEndText2. gameObject.SetActive(false);
 
 
 
-                    TTSMGEndTextButton1.gameObject.SetActive(false);
-                    TTSMGEndTextButton1a.gameObject.SetActive(false);
-                    TTSMGEndTextButton1b.gameObject.SetActive(false);
 
-                    MGNotBigEnough.enabled = true;
-                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(true);
-                    StartCoroutine(MoveTextOn());
-
-                    // progressText.gameObject.SetActive(true);
-                    text5Read = true; 
-                }
-            }
-
-            if (currentStage1TreeText == 6)
-            {
-                if (!textRead6)
-                {
+                    textPanalToHide.gameObject.SetActive(false);
                     MGAssesment.enabled = false;
                     TTSMGAssesmentButton.gameObject.SetActive(false);
                     MGAssesment.gameObject.SetActive(false);
@@ -298,6 +282,35 @@ namespace Alpha.Phases.Robo.Grow
 
                     MGNotBigEnough.enabled = false;
                     TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(false);
+
+                    // progressText.gameObject.SetActive(true);
+                    text5Read = true; 
+                }
+            }
+
+            if (currentStage1TreeText == 6)
+            {
+                if (!textRead6)
+                {
+                    MGAssesment.enabled = false;
+                    TTSMGAssesmentButton.gameObject.SetActive(false);
+                    MGAssesment.gameObject.SetActive(false);
+                    textPanalToHide.SetActive(true);
+                    MGEndText.gameObject.SetActive(false);
+                    MGEndText1.gameObject.SetActive(false);
+                    MGEndText2.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoNotBigEnough");
+
+
+
+                    TTSMGEndTextButton1.gameObject.SetActive(false);
+                    TTSMGEndTextButton1a.gameObject.SetActive(false);
+                    TTSMGEndTextButton1b.gameObject.SetActive(false);
+
+                    MGNotBigEnough.enabled = true;
+                    TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(true);
+                    StartCoroutine(MoveTextOn());
+
                     textRead6 = true;
                 }
                
@@ -569,7 +582,7 @@ namespace Alpha.Phases.Robo.Grow
         {
             LOLSDK.Instance.SpeakText("stage1MiniGameAssesmentSection");
         }
-
+        
         void MoveClickeditemToCorrectplace1()
         {
             if (!hasSlot1FilledAlready)

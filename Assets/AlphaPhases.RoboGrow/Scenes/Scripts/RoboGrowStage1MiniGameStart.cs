@@ -125,6 +125,7 @@ namespace Alpha.Phases.Robo.Grow
                     rgMain.EnableStage1Hint5();
                     progressTextBack.gameObject.SetActive(false);
                     textPanal.SetActive(true);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfo");
 
                     jobotIntroStage1Tree.gameObject.SetActive(true);
                     jobotIntroStage1Tree1a.gameObject.SetActive(false);
@@ -156,6 +157,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoa");
 
                     jobotIntroStage1Tree.gameObject.SetActive(false);
                     jobotIntroStage1Tree1a.gameObject.SetActive(true);
@@ -183,6 +185,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfob");
 
                     jobotIntroStage1Tree1a.gameObject.SetActive(false);
                     jobotIntroStage1Tree1b.gameObject.SetActive(true);
@@ -210,6 +213,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoc");
 
                     jobotIntroStage1Tree1b.gameObject.SetActive(false);
                     jobotIntroStage1Tree1c.gameObject.SetActive(true);
@@ -238,6 +242,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfod");
 
                     jobotIntroStage1Tree1c.gameObject.SetActive(false);
                     jobotIntroStage1Tree1d.gameObject.SetActive(true);
@@ -272,6 +277,7 @@ namespace Alpha.Phases.Robo.Grow
                     progressTextBackPanel2.gameObject.SetActive(false);
                     mgTextPanal.SetActive(true);
                     StartCoroutine(DelayCatController());
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoe");
 
                     jobotIntroStage1Tree1d.gameObject.SetActive(false);
                     jobotIntroStage1Tree1e.gameObject.SetActive(true);
@@ -300,6 +306,7 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     progressTextPanel2.gameObject.SetActive(false);
                     progressTextBackPanel2.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfof");
 
                     jobotIntroStage1Tree1e.gameObject.SetActive(false);
                     jobotIntroStage1Tree1f.gameObject.SetActive(true);
@@ -334,6 +341,7 @@ namespace Alpha.Phases.Robo.Grow
 
                     jobotIntroStage1Tree1f.gameObject.SetActive(false);
                     jobotIntroStage1Tree1j.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoPlayerEatena");
 
 
 
@@ -354,6 +362,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotIntroStage1Tree1f.gameObject.SetActive(false);
                     jobotIntroStage1Tree1j.gameObject.SetActive(false);
                     TTSJobotTree1j.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoProceedToEnd");
 
                     StartCoroutine(Proceed());
                     TTSJobotTree1Proceed.gameObject.SetActive(true);

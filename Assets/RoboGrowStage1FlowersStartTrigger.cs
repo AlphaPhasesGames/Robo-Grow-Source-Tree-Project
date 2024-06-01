@@ -29,7 +29,10 @@ namespace Alpha.Phases.Robo.Grow
         public BoxCollider radishFlowerBox;
         public BoxCollider daisyFlowerBox;
 
-
+        public bool textRead1;
+        public bool textRead2;
+        public bool textRead3;
+        public bool textRead4;
 
        public GameObject susanArrowToDisable;
        public GameObject limaArrowToDisable;
@@ -102,124 +105,150 @@ namespace Alpha.Phases.Robo.Grow
 
             if (currentStage1FlowerText == 1)
             {
-                robCont.NewNavmeshStop();
-                if (!textBeenRead)
+                if (!textRead1)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                progressTextBack.gameObject.SetActive(false);
-                textPanal.SetActive(true);
-                jobotIntroStage1Flower.enabled = true;
-                jobotIntroStage1Flower1a.enabled = false;
-                jobotIntroStage1Flower1b.enabled = false;
-                playerCam.enabled = false;
-                robCont.NewNavmeshStop();
-                TTSJobotFlower1.gameObject.SetActive(true);
-                TTSJobotFlower1a.gameObject.SetActive(false);
-                TTSJobotFlower1b.gameObject.SetActive(false);
+                    robCont.NewNavmeshStop();
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1PlantIntroInfo");
 
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
+                    progressTextBack.gameObject.SetActive(false);
+                    textPanal.SetActive(true);
+                    jobotIntroStage1Flower.enabled = true;
+                    jobotIntroStage1Flower1a.enabled = false;
+                    jobotIntroStage1Flower1b.enabled = false;
+                    playerCam.enabled = false;
+                    robCont.NewNavmeshStop();
+                    TTSJobotFlower1.gameObject.SetActive(true);
+                    TTSJobotFlower1a.gameObject.SetActive(false);
+                    TTSJobotFlower1b.gameObject.SetActive(false);
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    textRead1 = true;
                 }
+               
             }
 
             if (currentStage1FlowerText == 2)
             {
-                //  pondFrogspawnIntro2
-                if (!textBeenRead)
+                if (!textRead2)
                 {
-                    progressText.gameObject.SetActive(false);
+                    //  pondFrogspawnIntro2
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1PlantIntroInfoa");
+
+                    jobotIntroStage1Flower.enabled = false;
+                    jobotIntroStage1Flower1a.enabled = true;
+                    jobotIntroStage1Flower1b.enabled = false;
+                    // robCont.enabled = false;
+                    progressTextBack.gameObject.SetActive(true);
+                    robCont.NewNavmeshStop();
+                    TTSJobotFlower1.gameObject.SetActive(false);
+                    TTSJobotFlower1a.gameObject.SetActive(true);
+                    TTSJobotFlower1b.gameObject.SetActive(false);
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButton());
+                        progressTextIsShowing = true;
+                    }
+                    textRead2 = true;
                 }
-                jobotIntroStage1Flower.enabled = false;
-                jobotIntroStage1Flower1a.enabled = true;
-                jobotIntroStage1Flower1b.enabled = false;
-                // robCont.enabled = false;
-                progressTextBack.gameObject.SetActive(true);
-                robCont.NewNavmeshStop();
-                TTSJobotFlower1.gameObject.SetActive(false);
-                TTSJobotFlower1a.gameObject.SetActive(true);
-                TTSJobotFlower1b.gameObject.SetActive(false);
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButton());
-                    progressTextIsShowing = true;
-                }
+              
             }
 
             if (currentStage1FlowerText == 3)
             {
-                //  pondFrogspawnIntro3
-                if (!textBeenRead)
+                if (!textRead3)
                 {
-                    progressText.gameObject.SetActive(false);
-                }
-                jobotIntroStage1Flower.enabled = false;
-                jobotIntroStage1Flower1a.enabled = false;
-                jobotIntroStage1Flower1b.enabled = true;
-                //  robCont.enabled = false;
-            
-                TTSJobotFlower1.gameObject.SetActive(false);
-                TTSJobotFlower1a.gameObject.SetActive(false);
-                TTSJobotFlower1b.gameObject.SetActive(true);
-                if (!plantProgressSaved)
-                {
-                    hint3.gameObject.SetActive(true);
-                    rgMain.stage1FlowersExamined = true;
-                    rgMain.Stage1PlantsExamined();
-                    plantProgressSaved = true;
-                }
+                    LOLSDK.Instance.SpeakText("stage1PlantIntroInfob");
 
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
+                    //  pondFrogspawnIntro3
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    jobotIntroStage1Flower.enabled = false;
+                    jobotIntroStage1Flower1a.enabled = false;
+                    jobotIntroStage1Flower1b.enabled = true;
+                    //  robCont.enabled = false;
+
+                    TTSJobotFlower1.gameObject.SetActive(false);
+                    TTSJobotFlower1a.gameObject.SetActive(false);
+                    TTSJobotFlower1b.gameObject.SetActive(true);
+                    if (!plantProgressSaved)
+                    {
+                        hint3.gameObject.SetActive(true);
+                        rgMain.stage1FlowersExamined = true;
+                        rgMain.Stage1PlantsExamined();
+                        plantProgressSaved = true;
+                    }
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    textRead3 = true;
                 }
+              
             }
 
             if (currentStage1FlowerText == 4)
             {
-                //  jobotIntroStage1e
-                //   robCont.enabled = false;
-                jobotIntroStage1Flower.enabled = false;
-                jobotIntroStage1Flower1a.enabled = false;
-                jobotIntroStage1Flower1b.enabled = false;
+                if (!textRead4)
+                {
+                    //  jobotIntroStage1e
+                    //   robCont.enabled = false;
+                    jobotIntroStage1Flower.enabled = false;
+                    jobotIntroStage1Flower1a.enabled = false;
+                    jobotIntroStage1Flower1b.enabled = false;
 
-                TTSJobotFlower1.gameObject.SetActive(false);
-                TTSJobotFlower1a.gameObject.SetActive(false);
-                TTSJobotFlower1b.gameObject.SetActive(false);
-                ReturnToPlayerCamFromPond();
-                robCont.NewNavmeshStop();
-                // stage1FlowerBoxToDisable1.enabled = true;
-                //  stage1FlowerBoxToDisable2.enabled = true;
-                // stage1FlowerBoxToDisable3.enabled = true;
-                // stage1FlowerBoxToDisable4.enabled = true;
+                    TTSJobotFlower1.gameObject.SetActive(false);
+                    TTSJobotFlower1a.gameObject.SetActive(false);
+                    TTSJobotFlower1b.gameObject.SetActive(false);
+                    ReturnToPlayerCamFromPond();
+                    robCont.NewNavmeshStop();
+                    // stage1FlowerBoxToDisable1.enabled = true;
+                    //  stage1FlowerBoxToDisable2.enabled = true;
+                    // stage1FlowerBoxToDisable3.enabled = true;
+                    // stage1FlowerBoxToDisable4.enabled = true;
 
-                susanArrowToDisable.gameObject.SetActive(false);
-                limaArrowToDisable.gameObject.SetActive(false);
-                daisyArrowToDisable.gameObject.SetActive(false);
-                radishArrowToDisable.gameObject.SetActive(false);
+                    susanArrowToDisable.gameObject.SetActive(false);
+                    limaArrowToDisable.gameObject.SetActive(false);
+                    daisyArrowToDisable.gameObject.SetActive(false);
+                    radishArrowToDisable.gameObject.SetActive(false);
 
-                // flowerArrowSusan.material = orangeMat;
-                // flowerArrowLima.material = orangeMat;
-                // flowerArrowDaisy.material = orangeMat;
-                //  flowerArrowRadish.material = orangeMat;
-                // stage1FlowerToDisable1.enabled = true;
-                // stage1FlowerToDisable1a.enabled = true;
-                // stage1FlowerToDisable1b.enabled = true;
-                // stage1FlowerToDisable1c.enabled = true;
-                //   stage1FlowerToDisable1d.enabled = true;
-                //   stage1FlowerToDisable1e.enabled = true;
-                ////  stage1FlowerToDisable1f.enabled = true;
-                //  stage1FlowerToDisable1g.enabled = true;
-                //   returnToPlayerCam.gameObject.SetActive(true);
-                // this.gameObject.SetActive(false);
-                susanFlowerBox.enabled = true;
-                limaFlowerBox.enabled = true;
-                daisyFlowerBox.enabled = true;
-                radishFlowerBox.enabled = true;
-                this.gameObject.SetActive(false);
+                    // flowerArrowSusan.material = orangeMat;
+                    // flowerArrowLima.material = orangeMat;
+                    // flowerArrowDaisy.material = orangeMat;
+                    //  flowerArrowRadish.material = orangeMat;
+                    // stage1FlowerToDisable1.enabled = true;
+                    // stage1FlowerToDisable1a.enabled = true;
+                    // stage1FlowerToDisable1b.enabled = true;
+                    // stage1FlowerToDisable1c.enabled = true;
+                    //   stage1FlowerToDisable1d.enabled = true;
+                    //   stage1FlowerToDisable1e.enabled = true;
+                    ////  stage1FlowerToDisable1f.enabled = true;
+                    //  stage1FlowerToDisable1g.enabled = true;
+                    //   returnToPlayerCam.gameObject.SetActive(true);
+                    // this.gameObject.SetActive(false);
+                    susanFlowerBox.enabled = true;
+                    limaFlowerBox.enabled = true;
+                    daisyFlowerBox.enabled = true;
+                    radishFlowerBox.enabled = true;
+                    this.gameObject.SetActive(false);
+                    textRead4 = true;
+                }
+              
 
             }
 
@@ -279,6 +308,10 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage1FlowerText--;
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
         }
 
         void JobotStage1Flower1()
