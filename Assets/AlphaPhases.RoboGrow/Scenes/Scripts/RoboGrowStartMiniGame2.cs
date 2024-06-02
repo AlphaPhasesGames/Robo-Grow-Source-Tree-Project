@@ -123,6 +123,7 @@ namespace Alpha.Phases.Robo.Grow
                     textPanal.SetActive(true);
                     jobotIntroStage2Pond.gameObject.SetActive(true);
                     jobotIntroStage2Pond1a.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage2Pond");
 
 
                     hint7.gameObject.SetActive(true);
@@ -147,6 +148,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage2Ponda");
 
                     jobotIntroStage2Pond.gameObject.SetActive(false);
                     jobotIntroStage2Pond1a.gameObject.SetActive(true);
@@ -173,6 +175,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage2Pondb");
 
                     jobotIntroStage2Pond1a.gameObject.SetActive(false);
                     jobotIntroStage2Pond1b.gameObject.SetActive(true);
@@ -198,6 +201,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     tadControl.enabled = false;
+                    LOLSDK.Instance.SpeakText("jobotStage2Pondc");
 
                     jobotIntroStage2Pond1b.gameObject.SetActive(false);
                     jobotIntroStage2Pond1c.gameObject.SetActive(true);
@@ -222,6 +226,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage2Pondd");
 
                     jobotIntroStage2Pond1c.gameObject.SetActive(false);
                     jobotIntroStage2Pond1d.gameObject.SetActive(true);
@@ -244,6 +249,7 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     tadControl.enabled = true;
                     textPanal.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage2PondeClue");
 
                     jobotIntroStage2Pond1d.gameObject.SetActive(false);
                     jobotIntroStage2Pond1e.gameObject.SetActive(true);
@@ -266,6 +272,7 @@ namespace Alpha.Phases.Robo.Grow
                     progressTextBack.gameObject.SetActive(false);
                     tadControl.enabled = false;
                     textPanal.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage2Pondf");
 
                     jobotIntroStage2Pond1e.gameObject.SetActive(false);
                     jobotIntroStage2Pond1f.gameObject.SetActive(true);
@@ -286,6 +293,7 @@ namespace Alpha.Phases.Robo.Grow
                 if (!text1Read8)
                 {
                     textPanal.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage2PondgEaten");
 
                     jobotIntroStage2Pond1f.gameObject.SetActive(false);
                     jobotIntroStage2Pond1Eaten.gameObject.SetActive(true);
@@ -336,7 +344,8 @@ namespace Alpha.Phases.Robo.Grow
                     //  End of Pond Stage
                     textPanal.SetActive(true);
                     jobotNotLargeEnough.enabled = true;
-                                       
+                    LOLSDK.Instance.SpeakText("jobotStage2PondgNotBigEnough");
+
                     StartCoroutine(CloseTextPanal());
                     progressText.gameObject.SetActive(false);
                     hasTextAppearedYet = true;

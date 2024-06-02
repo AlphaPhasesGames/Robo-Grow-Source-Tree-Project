@@ -132,19 +132,20 @@ namespace Alpha.Phases.Robo.Grow
                     jobotIntroStage1FlowerBlackEyedSusan1.enabled = true;
                     jobotIntroStage1FlowerBlackEyedSusan2.gameObject.SetActive(false);
                     jobotIntroStage1FlowerBlackEyedSusan3.gameObject.SetActive(false);
-
-
-/*
-                    TTSJobotFlower1BlackEyedSusan1.gameObject.SetActive(true);
-                    TTSJobotFlower1BlackEyedSusan2.gameObject.SetActive(false);
-                    TTSJobotFlower1BlackEyedSusan3.gameObject.SetActive(false);
-
-                    jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
                     jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
 
-                    TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                    TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-*/
+
+                    /*
+                                        TTSJobotFlower1BlackEyedSusan1.gameObject.SetActive(true);
+                                        TTSJobotFlower1BlackEyedSusan2.gameObject.SetActive(false);
+                                        TTSJobotFlower1BlackEyedSusan3.gameObject.SetActive(false);
+
+                                        jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
+                                        jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
+
+                                        TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
+                                        TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
+                    */
                     removeDeadPlants.gameObject.SetActive(false);
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -313,13 +314,10 @@ namespace Alpha.Phases.Robo.Grow
                     // robCont.enabled = false;
                     //robCont.NewNavmeshStop();
 
-
-                    jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
+                    jobotIntroStage1FlowerBlackEyedSusan3.gameObject.SetActive(false);
                     jobotFlowerAssesmentAnswerIncorrect.enabled = true;
                     jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);
 
-                    TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                    TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);
                     progressText.gameObject.SetActive(false);
                     progressTextBack.gameObject.SetActive(false);
                     robotToStopNavmesh.GetComponent<NavMeshAgent>().isStopped = false;
@@ -430,8 +428,13 @@ namespace Alpha.Phases.Robo.Grow
                 // CollectSeeds();
                 currentStage1FlowerBlackEyedSusanText = 7;
                 amountOfGuesses++;
-          
-          
+            text1Read = false;
+            text2Read = false;
+            text3Read = false;
+            text4Read = false;
+            text5Read = false;
+            text6Read = false;
+
 
 
             //  catControl.enabled = true;
@@ -523,7 +526,12 @@ namespace Alpha.Phases.Robo.Grow
            // plant2Box.enabled = true;
           //  plant3Box.enabled = true;
             currentStage1FlowerBlackEyedSusanText = 0;
-          
+            text1Read = false;
+            text2Read = false;
+            text3Read = false;
+            text4Read = false;
+            text5Read = false;
+            text6Read = false;
         }
 
 

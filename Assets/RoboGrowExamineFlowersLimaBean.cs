@@ -123,9 +123,9 @@ namespace Alpha.Phases.Robo.Grow
 
                     robCont.NewNavmeshStop();
                     textPanal.SetActive(true);
-                    jobotIntroStage1Flower.enabled = true;
-                    jobotIntroStage1Flower1a.enabled = false;
-                    jobotIntroStage1Flower1b.enabled = false;
+                    jobotIntroStage1Flower.gameObject.SetActive(true);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(false);
                     // robCont.enabled = false;
                     playerCam.enabled = false;
 
@@ -152,9 +152,9 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     progressTextBack.gameObject.SetActive(true);
                     //  pondFrogspawnIntro2
-                    jobotIntroStage1Flower.enabled = false;
-                    jobotIntroStage1Flower1a.enabled = true;
-                    jobotIntroStage1Flower1b.enabled = false;
+                    jobotIntroStage1Flower.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(true);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(false);
                     // robCont.enabled = false;
                     LOLSDK.Instance.SpeakText("stage1PlantIntroInfoa");
 
@@ -181,9 +181,9 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    jobotIntroStage1Flower.enabled = false;
-                    jobotIntroStage1Flower1a.enabled = false;
-                    jobotIntroStage1Flower1b.enabled = true;
+                    jobotIntroStage1Flower.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(true);
                     //  robCont.enabled = false;
                     LOLSDK.Instance.SpeakText("stage1PlantIntroInfob");
 

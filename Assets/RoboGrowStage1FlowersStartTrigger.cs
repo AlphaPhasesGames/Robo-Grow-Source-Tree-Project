@@ -116,15 +116,12 @@ namespace Alpha.Phases.Robo.Grow
 
                     progressTextBack.gameObject.SetActive(false);
                     textPanal.SetActive(true);
-                    jobotIntroStage1Flower.enabled = true;
-                    jobotIntroStage1Flower1a.enabled = false;
-                    jobotIntroStage1Flower1b.enabled = false;
+                    jobotIntroStage1Flower.gameObject.SetActive(true);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(false);
                     playerCam.enabled = false;
                     robCont.NewNavmeshStop();
-                    TTSJobotFlower1.gameObject.SetActive(true);
-                    TTSJobotFlower1a.gameObject.SetActive(false);
-                    TTSJobotFlower1b.gameObject.SetActive(false);
-
+                  
                     if (!progressTextIsShowing)
                     { // 3 second delay
                         StartCoroutine(DelayProgressButtonVar1());
@@ -146,15 +143,13 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     LOLSDK.Instance.SpeakText("stage1PlantIntroInfoa");
 
-                    jobotIntroStage1Flower.enabled = false;
-                    jobotIntroStage1Flower1a.enabled = true;
-                    jobotIntroStage1Flower1b.enabled = false;
+                    jobotIntroStage1Flower.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(true);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(false);
                     // robCont.enabled = false;
                     progressTextBack.gameObject.SetActive(true);
                     robCont.NewNavmeshStop();
-                    TTSJobotFlower1.gameObject.SetActive(false);
-                    TTSJobotFlower1a.gameObject.SetActive(true);
-                    TTSJobotFlower1b.gameObject.SetActive(false);
+                  
                     if (!progressTextIsShowing)
                     { // 3 second delay
                         StartCoroutine(DelayProgressButton());
@@ -176,14 +171,12 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    jobotIntroStage1Flower.enabled = false;
-                    jobotIntroStage1Flower1a.enabled = false;
-                    jobotIntroStage1Flower1b.enabled = true;
+                    jobotIntroStage1Flower.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(true);
                     //  robCont.enabled = false;
 
-                    TTSJobotFlower1.gameObject.SetActive(false);
-                    TTSJobotFlower1a.gameObject.SetActive(false);
-                    TTSJobotFlower1b.gameObject.SetActive(true);
+
                     if (!plantProgressSaved)
                     {
                         hint3.gameObject.SetActive(true);
@@ -208,13 +201,10 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     //  jobotIntroStage1e
                     //   robCont.enabled = false;
-                    jobotIntroStage1Flower.enabled = false;
-                    jobotIntroStage1Flower1a.enabled = false;
-                    jobotIntroStage1Flower1b.enabled = false;
+                    jobotIntroStage1Flower.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1a.gameObject.SetActive(false);
+                    jobotIntroStage1Flower1b.gameObject.SetActive(false);
 
-                    TTSJobotFlower1.gameObject.SetActive(false);
-                    TTSJobotFlower1a.gameObject.SetActive(false);
-                    TTSJobotFlower1b.gameObject.SetActive(false);
                     ReturnToPlayerCamFromPond();
                     robCont.NewNavmeshStop();
                     // stage1FlowerBoxToDisable1.enabled = true;

@@ -354,7 +354,7 @@ namespace Alpha.Phases.Robo.Grow
         // Update is called once per frame
         void Update()
         {
-            if(rgMain.currentGameStage == 2)
+            if(rgMain.currentGameStage == 2) 
             {
                 if (currentStage2TreeText == 1)
                 {
@@ -367,10 +367,12 @@ namespace Alpha.Phases.Robo.Grow
                         progressTextBack.gameObject.SetActive(false);
                         robCont.enabled = false;
                         textPanal.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantWaterAssesmentText");
 
                         susan1plantBoxToDisable.enabled = false;
                         jobotIntroStage2PlantAsses1.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1a.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses1IncorrectGuess.gameObject.SetActive(false);
 
                         if (!progressTextIsShowing)
                         { // 3 second delay
@@ -392,6 +394,8 @@ namespace Alpha.Phases.Robo.Grow
                             progressText.gameObject.SetActive(false);
                         }
                         progressTextBack.gameObject.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantWaterAssesmentText1");
+
                         //   robCont.enabled = false;
                         jobotIntroStage2PlantAsses1.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1a.gameObject.SetActive(true);
@@ -421,6 +425,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1a.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1b.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1c.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantWaterAssesmentText2");
 
                         if (!progressTextIsShowing)
                         { // 3 second delay
@@ -444,6 +449,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1c.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1d.gameObject.SetActive(false);
                         Asses2AnagramBoard.gameObject.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantWaterAssesmentText3");
 
                         wrongGuess1.onClick.AddListener(ProgressToWrongGuess);
                         wrongGuess2.onClick.AddListener(ProgressToWrongGuess);
@@ -468,6 +474,8 @@ namespace Alpha.Phases.Robo.Grow
 
                         jobotIntroStage2PlantAsses1c.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1d.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses1d.enabled = true;
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantWaterAssesmentCorrectText");
 
                         Asses2AnagramBoard.gameObject.SetActive(false);
                         waterSeedsStage1.gameObject.SetActive(true);
@@ -510,6 +518,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1c.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1d.gameObject.SetActive(false);
                         Asses2AnagramBoard.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantSeedExamineWaterplantWrong");
 
                         //TTSJobotIncorrectGuess.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1IncorrectGuess.gameObject.SetActive(true);
@@ -523,7 +532,7 @@ namespace Alpha.Phases.Robo.Grow
                 }
             }
 
-            if (rgMain.currentGameStage == 3)
+            if (rgMain.currentGameStage == 3) 
             {
                 if (currentStage3TreeText == 1)
                 {
@@ -537,6 +546,7 @@ namespace Alpha.Phases.Robo.Grow
                         robCont.enabled = false;
                         textPanalStage3.SetActive(true);
                         susan1plantBoxToDisable.enabled = false;
+                        LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentText");
 
                         jobotIntroStage2PlantAsses1Stage3.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1aStage3.gameObject.SetActive(false);
@@ -563,6 +573,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressTextBackStage3.gameObject.SetActive(true);
                         //   robCont.enabled = false;
                         susan1plantBoxToDisable.enabled = false;
+                        LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentText1");
 
                         jobotIntroStage2PlantAsses1Stage3.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1aStage3.gameObject.SetActive(true);
@@ -592,6 +603,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1aStage3.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1bStage3.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1cStage3.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentText2");
 
                         if (!progressTextIsShowingStage3)
                         { // 3 second delay
@@ -611,6 +623,7 @@ namespace Alpha.Phases.Robo.Grow
                         //  progressText.gameObject.SetActive(false);
                         //   robCont.enabled = false;
                         progressTextStage3.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentText3");
 
                         jobotIntroStage2PlantAsses1bStage3.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1cStage3.gameObject.SetActive(true);
@@ -634,6 +647,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1cStage3.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1dStage3.gameObject.SetActive(true);
                         hangmanGamePanal.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage2PlantWaterAssesmentCorrectText");
 
                         waterSeedsStage3.gameObject.SetActive(true);
                         waterSeedsStage3.enabled = true;
@@ -676,6 +690,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressTextStage3.gameObject.SetActive(false);
                         textPanalStage3.SetActive(true);
                         //  robCont.enabled = true;
+                        LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentLeavesGone");
 
                         //  Asses2AnagramBoard.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1cStage3.gameObject.SetActive(false);
@@ -729,7 +744,7 @@ namespace Alpha.Phases.Robo.Grow
                 }
 
 
-            if (rgMain.currentGameStage == 4)
+            if (rgMain.currentGameStage == 4) 
             {
                 if (currentStage4TreeText == 1)
                 {
@@ -742,6 +757,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressTextBackStage4.gameObject.SetActive(false);
                         robCont.enabled = false;
                         textPanalStage4.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage4WaterPlantsAsessement");
 
                         susan1plantBoxToDisable.enabled = false;
                         jobotIntroStage2PlantAsses1Stage4.gameObject.SetActive(true);
@@ -769,6 +785,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressTextBackStage4.gameObject.SetActive(true);
                         //   robCont.enabled = false;
                         susan1plantBoxToDisable.enabled = false;
+                        LOLSDK.Instance.SpeakText("jobotStage4WaterPlantsAsessement1");
 
                         jobotIntroStage2PlantAsses1Stage4.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1aStage4.gameObject.SetActive(true);
@@ -800,6 +817,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1bStage4.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1cCorrectStage4.gameObject.SetActive(false);
                         mazeGamePanal.gameObject.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage4WaterPlantsAsessement2");
 
 
 
@@ -828,6 +846,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1bStage4.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1cCorrectStage4.gameObject.SetActive(true);
                         mazeGamePanal.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage4WaterPlantsAsessement3Correct");
 
 
                         waterSeedsStage4.gameObject.SetActive(true);
@@ -849,6 +868,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1cCorrectStage4.gameObject.SetActive(false);
 
                         jobotIntroStage2PlantAsses1IncorrectGuessStage4.gameObject.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage4WaterPlantsAsessement3Incorrect");
 
                         if (!playerAlreadyGuessedIncorrectStage4)
                         {
@@ -1256,6 +1276,13 @@ namespace Alpha.Phases.Robo.Grow
             daisy2plantBoxToDisable.enabled = true;
             radish1plantBoxToDisable.enabled = true;
             radish2plantBoxToDisable.enabled = true;
+            stage2Text1Read = false;
+            stage2Text2Read = false;
+            stage2Text3Read = false;
+            stage2Text4Read = false;
+            stage2Text5Read = false;
+            stage2Text6Read = false;
+            stage2Text7Read = false;
             rgStage2PR.amountOfFails++;
         }
 
@@ -1459,7 +1486,7 @@ namespace Alpha.Phases.Robo.Grow
             }
         }
 
-
+        
         void JobotStage3Plant1Asses()
         {
             LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentText");

@@ -34,9 +34,16 @@ namespace Alpha.Phases.Robo.Grow
         public Button wrongAnswer;
         public Button wrongAnswer2;
 
-      //  public BoxCollider plant1Box;
-     //   public BoxCollider plant2Box;
-     //   public BoxCollider plant3Box;
+        public bool textRead1;
+        public bool textRead2;
+        public bool textRead3;
+        public bool textRead4;
+        public bool textRead5;
+        public bool textRead6;
+
+        //  public BoxCollider plant1Box;
+        //   public BoxCollider plant2Box;
+        //   public BoxCollider plant3Box;
 
         public Renderer arrowRend;
 
@@ -96,12 +103,7 @@ namespace Alpha.Phases.Robo.Grow
             // returnToPlayeCam.gameObject.SetActive(false);
             //    collectSeeds.gameObject.SetActive(false);
             removeDeadPlants.gameObject.SetActive(false);
-
-            jobotIntroStage1Flower3RadishPlant1.enabled = false;
-            jobotIntroStage1Flower3RadishPlant2.enabled = false;
-            jobotIntroStage1Flower3RadishPlant3.enabled = false;
-            jobotFlowerAssesmentAnswerCorrect.enabled = false;
-            jobotFlowerAssesmentAnswerIncorrect.enabled = false;
+         
             //   flowerCam.enabled = false;
         }
 
@@ -111,186 +113,183 @@ namespace Alpha.Phases.Robo.Grow
 
             if (currentStage1FlowerRadishPlantText == 1)
             {
-                if (!textBeenRead)
+                if (!textRead1)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    if (!hasTextBeenSpoken)
+                    {
+                        textPanal.SetActive(true);
+                        hasTextBeenSpoken = true;
+
+                    }
+                    LOLSDK.Instance.SpeakText("stage1Plant4RadishText1");
+
+                    removeDeadPlants.gameObject.SetActive(false);
+                    progressTextBack.gameObject.SetActive(false);
+                    robCont.enabled = false;
+                    jobotIntroStage1Flower3RadishPlant1.gameObject.SetActive(true);
+                    jobotIntroStage1Flower3RadishPlant2.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant3.gameObject.SetActive(false);
+                    jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
+
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    textRead1 = true;
                 }
-                if (!hasTextBeenSpoken)
-                {
-                    textPanal.SetActive(true);
-                    hasTextBeenSpoken = true;
-
-                }
-                LOLSDK.Instance.SpeakText("stage1Plant4RadishText1");
-
-                removeDeadPlants.gameObject.SetActive(false);
-                progressTextBack.gameObject.SetActive(false);
-                robCont.enabled = false;
-                jobotIntroStage1Flower3RadishPlant1.enabled = true;
-                jobotIntroStage1Flower3RadishPlant2.enabled = false;
-                jobotIntroStage1Flower3RadishPlant3.enabled = false;
-                TTSJobotFlower4RadishPlant1.gameObject.SetActive(true);
-                TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
-
-                jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-
-                TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
-                }
+              
             }
 
             if (currentStage1FlowerRadishPlantText == 2)
             {
-                if (!textBeenRead)
+                if (!textRead2)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+                    LOLSDK.Instance.SpeakText("stage1Plant4RadishTextb");
+                    
+
+                    jobotIntroStage1Flower3RadishPlant1.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant2.gameObject.SetActive(true);
+                    jobotIntroStage1Flower3RadishPlant3.gameObject.SetActive(false);
+
+                    progressTextBack.gameObject.SetActive(true);
+                    removeDeadPlants.gameObject.SetActive(false);
+                 
+                   
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar1());
+                        progressTextIsShowing = true;
+                    }
+                    textRead2 = true;
                 }
-                LOLSDK.Instance.SpeakText("stage1Plant4RadishText1a");
-
-                jobotIntroStage1Flower3RadishPlant1.enabled = false;
-                jobotIntroStage1Flower3RadishPlant2.enabled = true;
-                jobotIntroStage1Flower3RadishPlant3.enabled = false;
-                progressTextBack.gameObject.SetActive(true);
-                removeDeadPlants.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant2.gameObject.SetActive(true);
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
-
-                jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-
-                TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar1());
-                    progressTextIsShowing = true;
-                }
+               
             }
 
             if (currentStage1FlowerRadishPlantText == 3)
             {
-                LOLSDK.Instance.SpeakText("stage1Plant4RadishText1b");
+                if (!textRead3)
+                {
+                    LOLSDK.Instance.SpeakText("stage1Plant1SusanText1b");
 
-                jobotIntroStage1Flower3RadishPlant1.enabled = false;
-                jobotIntroStage1Flower3RadishPlant2.enabled = false;
-                jobotIntroStage1Flower3RadishPlant3.enabled = true;
-                // progressTextBack.gameObject.SetActive(true);
-                robCont.NewNavmeshStop();
-                removeDeadPlants.gameObject.SetActive(true);
-                TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(true);
-                jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant1.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant2.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant3.gameObject.SetActive(true);
+                   //obotIntroStage1Flower3RadishPlant3.enabled = true;
+                    // progressTextBack.gameObject.SetActive(true);
+                    robCont.NewNavmeshStop();
+                    removeDeadPlants.gameObject.SetActive(true);
+                
 
-                removeDeadPlants.onClick.AddListener(RemoveDeadPlants);
-                wrongAnswer.onClick.AddListener(WrongAsnwer);
-                wrongAnswer2.onClick.AddListener(WrongAsnwer);
+                    removeDeadPlants.onClick.AddListener(RemoveDeadPlants);
+                    wrongAnswer.onClick.AddListener(WrongAsnwer);
+                    wrongAnswer2.onClick.AddListener(WrongAsnwer);
 
-                TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(true);
-                robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
-                progressText.gameObject.SetActive(false);
+                  
+                    TTSJobotFlower4RadishPlant3.gameObject.SetActive(true);
+                    robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
+                    progressText.gameObject.SetActive(false);
+                    textRead3 = true;
+                }
+             
             }
 
             if (currentStage1FlowerRadishPlantText == 4)
             {
-                if (!textBeenRead)
+                if (!textRead4)
                 {
-                    progressText.gameObject.SetActive(false);
+                    if (!textBeenRead)
+                    {
+                        progressText.gameObject.SetActive(false);
+                    }
+
+                    textPanal.gameObject.SetActive(true);
+
+                    jobotIntroStage1Flower3RadishPlant3.enabled = false;
+
+                    LOLSDK.Instance.SpeakText("assesmentSection1AnswerCorrect");
+
+                    jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(true);
+                    jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
+                    jobotFlowerAssesmentAnswerCorrect.enabled = true;
+                    robCont.NewNavmeshStop();
+
+                    robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
+
+                    if (!progressTextIsShowing)
+                    { // 3 second delay
+                        StartCoroutine(DelayProgressButtonVar2());
+                        progressTextIsShowing = true;
+                    }
+                    textRead4 = true;
                 }
-
-                textPanal.gameObject.SetActive(true);
-                jobotIntroStage1Flower3RadishPlant1.enabled = false;
-                jobotIntroStage1Flower3RadishPlant2.enabled = false;
-                jobotIntroStage1Flower3RadishPlant3.enabled = false;
-                TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
-                LOLSDK.Instance.SpeakText("assesmentSection1AnswerCorrect");
-
-                jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(true);
-                jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerCorrect.enabled = true;
-                TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(true);
-                TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-                robCont.NewNavmeshStop();
-                
-                robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
-
-                if (!progressTextIsShowing)
-                { // 3 second delay
-                    StartCoroutine(DelayProgressButtonVar2());
-                    progressTextIsShowing = true;
-                }
+           
 
             }
                      
 
             if (currentStage1FlowerRadishPlantText == 5)
             {
-                textPanal.gameObject.SetActive(false);
-                jobotIntroStage1Flower3RadishPlant1.enabled = false;
-                jobotIntroStage1Flower3RadishPlant2.enabled = false;
-                jobotIntroStage1Flower3RadishPlant3.enabled = false;
-                TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerIncorrect.enabled = false;
-                jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-
-                TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
-                progressText.gameObject.SetActive(false);
-                progressTextBack.gameObject.SetActive(false);
-                robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
-                rgResetAss.enabled = false;
-                Destroy(triggerArrow);
-                Destroy(stage1FlowerArrow1);
-                Destroy(stage1FlowerArrow2);
-                Destroy(stage1FlowerArrow3);
-                if (!saveOnce)
+                if (!textRead5)
                 {
-                    CloseBox();
-                    saveOnce = true;
+                    textPanal.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant1.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant2.gameObject.SetActive(false);
+                    jobotIntroStage1Flower3RadishPlant3.gameObject.SetActive(false);
+                  
+                    jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
+                    jobotFlowerAssesmentAnswerIncorrect.enabled = false;
+                    jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(false);
+                                     
+                    progressText.gameObject.SetActive(false);
+                    progressTextBack.gameObject.SetActive(false);
+                    robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
+                    rgResetAss.enabled = false;
+                    Destroy(triggerArrow);
+                    Destroy(stage1FlowerArrow1);
+                    Destroy(stage1FlowerArrow2);
+                    Destroy(stage1FlowerArrow3);
+                    if (!saveOnce)
+                    {
+                        CloseBox();
+                        saveOnce = true;
+                    }
+                    textRead5 = true;
                 }
-                
-             
-
             }
+
             if (currentStage1FlowerRadishPlantText == 7)
             {
-                textPanal.gameObject.SetActive(true);
-                jobotIntroStage1Flower3RadishPlant1.enabled = false;
-                jobotIntroStage1Flower3RadishPlant2.enabled = false;
-                jobotIntroStage1Flower3RadishPlant3.enabled = false;
-                TTSJobotFlower4RadishPlant1.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant2.gameObject.SetActive(false);
-                TTSJobotFlower4RadishPlant3.gameObject.SetActive(false);
-                LOLSDK.Instance.SpeakText("assesmentSection1AnswerIncorrect");
+                if (!textRead6)
+                {
+                    textPanal.gameObject.SetActive(true);
 
-                jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);
-                jobotFlowerAssesmentAnswerIncorrect.enabled = true;
-                TTSJobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
-                TTSJobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);
-               // robCont.NewNavmeshStop();
-                progressText.gameObject.SetActive(false);
-                progressTextBack.gameObject.SetActive(false);
-                robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
-                StartCoroutine(CloseBoxWrong());
+                    jobotIntroStage1Flower3RadishPlant3.gameObject.SetActive(false);
+
+                    LOLSDK.Instance.SpeakText("assesmentSection1AnswerIncorrect");
+
+                    jobotFlowerAssesmentAnswerCorrect.gameObject.SetActive(false);
+                    jobotFlowerAssesmentAnswerIncorrect.gameObject.SetActive(true);
+                    jobotFlowerAssesmentAnswerIncorrect.enabled = true;
+
+                    // robCont.NewNavmeshStop();
+                    progressText.gameObject.SetActive(false);
+                    progressTextBack.gameObject.SetActive(false);
+                    robotNavMeshToStop.GetComponent<NavMeshAgent>().isStopped = false;
+                    StartCoroutine(CloseBoxWrong());
+                    textRead6 = true;
+                }
+                
             }
         }
 
@@ -335,6 +334,12 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage1FlowerRadishPlantText--;
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
+            textRead5 = false;
+            textRead6 = false;
         }
         public void WrongAsnwer()
         {
@@ -357,7 +362,12 @@ namespace Alpha.Phases.Robo.Grow
             wrongAnswer2.onClick.RemoveListener(WrongAsnwer);
             currentStage1FlowerRadishPlantText = 7;
             amountOfGuesses++;
-
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
+            textRead5 = false;
+            textRead6 = false;
 
             //  catControl.enabled = true;
         }
@@ -459,9 +469,15 @@ namespace Alpha.Phases.Robo.Grow
             triggerArrow.gameObject.SetActive(false);
             textPanal.gameObject.SetActive(false);
             plantscanvasTohide.gameObject.SetActive(false);
-        //    plant1Box.enabled = true;
-        //    plant2Box.enabled = true;
-        //    plant3Box.enabled = true;
+            //    plant1Box.enabled = true;
+            //    plant2Box.enabled = true;
+            //    plant3Box.enabled = true;
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
+            textRead5 = false;
+            textRead6 = false;
             currentStage1FlowerRadishPlantText = 0;
         }
     }

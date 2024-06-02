@@ -160,65 +160,7 @@ namespace Alpha.Phases.Robo.Grow
         {
                 
                 robotControl.enabled = false;
-            /*   textPanalToHide.SetActive(false);
-               jobotIntroStage1Section1.enabled = false;
-               jobotIntroStage1Section1a.enabled = false;
-         //      jobotIntroStage1Section1b.enabled = false;
-               jobotIntroStage1Section1c.enabled = false;
-               jobotIntroStage1Section1d.enabled = false;
-          //     jobotIntroStage1Section1e.enabled = false;
-               jobotIntroStage1Section1f.enabled = false;
-               jobotIntroStage1Section1g.enabled = false;
-               jobotIntroStage1Section1h.enabled = false;
-               jobotIntroStage1Section1i.enabled = false;
-               jobotStage2PlantSeed.enabled = false;
-               jobotStage2PlantSeeda.enabled = false;
-               jobotStage2PlantSeedb.enabled = false;
-           //    jobotStage2PlantSeedc.enabled = false;
-          //     jobotStage2PlantSeedd.enabled = false;
-               jobotStage2PlantSeede.enabled = false;
-               jobotSeedsPlanted.enabled = false;
-           jobotSeedsWatered.enabled = false;
-           /* jobotIntroStage1Section1j.enabled = false;
-            jobotIntroStage1Section1k.enabled = false;
-            jobotIntroStage1Section1l.enabled = false;
-            jobotIntroStage1Section1m.enabled = false;
-            jobotIntroStage1Section1n.enabled = false;
-            jobotIntroStage1Section1o.enabled = false;
-            jobotIntroStage1Section1p.enabled = false;
-            jobotIntroStage1Section1q.enabled = false;
-            jobotIntroStage1Section1r.enabled = false;
 
-
-               TTSJobot1.gameObject.SetActive(false);
-               TTSJobot2.gameObject.SetActive(false);
-          //     TTSJobot3.gameObject.SetActive(false);
-               TTSJobot4.gameObject.SetActive(false);
-               TTSJobot5.gameObject.SetActive(false);
-           //    TTSJobot6.gameObject.SetActive(false);
-               TTSJobot7.gameObject.SetActive(false);
-               TTSJobot8.gameObject.SetActive(false);
-               TTSJobot9.gameObject.SetActive(false);
-               TTSJobot10.gameObject.SetActive(false);
-               TTSJobotPlantSeed1.gameObject.SetActive(false);
-               TTSJobotPlantSeed2.gameObject.SetActive(false);
-               TTSJobotPlantSeed3.gameObject.SetActive(false);
-          //     TTSJobotPlantSeed4.gameObject.SetActive(false);
-           //    TTSJobotPlantSeed5.gameObject.SetActive(false);
-               TTSJobotPlantSeed6.gameObject.SetActive(false);
-           TTSSeedsComplete.gameObject.SetActive(false);
-           TTSseedsWateredComplete.gameObject.SetActive(false);
-           /*TTSJobot11.gameObject.SetActive(false);
-           TTSJobot12.gameObject.SetActive(false);
-           TTSJobot13.gameObject.SetActive(false);
-           TTSJobot14.gameObject.SetActive(false);
-           TTSJobot15.gameObject.SetActive(false);
-           TTSJobot16.gameObject.SetActive(false);
-           TTSJobot17.gameObject.SetActive(false);
-           TTSJobot18.gameObject.SetActive(false);
-           TTSJobot19.gameObject.SetActive(false);
-            */
-          // TTSStage2Complete.gameObject.SetActive(false);
             stage2Complete.gameObject.SetActive(false);
 
         }
@@ -241,48 +183,10 @@ namespace Alpha.Phases.Robo.Grow
                     textPanalToHide.SetActive(true);
                     jobotIntroStage1Section1.gameObject.SetActive(true);
                     jobotIntroStage1Section1a.gameObject.SetActive(false);
-                    //TTSJobot1.gameObject.SetActive(true);
-                    /*
-                    //    jobotIntroStage1Section1b.enabled = false;
-                    jobotIntroStage1Section1c.enabled = false;
-                    jobotIntroStage1Section1d.enabled = false;
-                    //   jobotIntroStage1Section1e.enabled = false;
-                    jobotIntroStage1Section1f.enabled = false;
-                    jobotIntroStage1Section1g.enabled = false;
-                    jobotIntroStage1Section1h.enabled = false;
-                    jobotIntroStage1Section1i.enabled = false;
-                    jobotStage2PlantSeed.enabled = false;
-                    jobotStage2PlantSeeda.enabled = false;
-                    jobotStage2PlantSeedb.enabled = false;
-                    //    jobotStage2PlantSeedc.enabled = false;
-                    //    jobotStage2PlantSeedd.enabled = false;
-                    jobotStage2PlantSeede.enabled = false;
-                    jobotSeedsPlanted.enabled = false;
-                    jobotSeedsWatered.enabled = false;
-                   
-                    
-                    TTSJobot2.gameObject.SetActive(false);
-                    //    TTSJobot3.gameObject.SetActive(false);
-                    TTSJobot4.gameObject.SetActive(false);
-                    TTSJobot5.gameObject.SetActive(false);
-                    //    TTSJobot6.gameObject.SetActive(false);
-                    TTSJobot7.gameObject.SetActive(false);
-                    TTSJobot8.gameObject.SetActive(false);
-                    TTSJobot9.gameObject.SetActive(false);
-                    TTSJobot10.gameObject.SetActive(false);
-                    TTSJobotPlantSeed1.gameObject.SetActive(false);
-                    TTSJobotPlantSeed2.gameObject.SetActive(false);
-                    TTSJobotPlantSeed3.gameObject.SetActive(false);
-                    //   TTSJobotPlantSeed4.gameObject.SetActive(false);
-                    //   TTSJobotPlantSeed5.gameObject.SetActive(false);
-                    TTSJobotPlantSeed6.gameObject.SetActive(false);
 
-                    TTSStage2Complete.gameObject.SetActive(false);
-                    stage2Complete.gameObject.SetActive(false);
-              
-                    TTSSeedsComplete.gameObject.SetActive(false);
-                    TTSseedsWateredComplete.gameObject.SetActive(false);
-                    */
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2");
+
+
                     progressTextBack.gameObject.SetActive(false);
                     jobotStage2PlantSeede.enabled = false;
                     jobotSeedsPlanted.enabled = false;
@@ -321,6 +225,9 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     progressTextBack.gameObject.SetActive(true);
 
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2a");
+
+
                     jobotIntroStage1Section1.gameObject.SetActive(false);
                     jobotIntroStage1Section1a.gameObject.SetActive(true);
                     jobotIntroStage1Section1c.gameObject.SetActive(false);
@@ -345,7 +252,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                  
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2c");
+
                     jobotIntroStage1Section1a.gameObject.SetActive(false);
                     jobotIntroStage1Section1c.gameObject.SetActive(true);
                     jobotIntroStage1Section1d.gameObject.SetActive(false);
@@ -368,6 +276,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2d");
 
                     jobotIntroStage1Section1c.gameObject.SetActive(false);
                     jobotIntroStage1Section1d.gameObject.SetActive(true);
@@ -390,7 +299,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2f");
+
                     jobotIntroStage1Section1d.gameObject.SetActive(false);
                     jobotIntroStage1Section1f.gameObject.SetActive(true);
                     jobotIntroStage1Section1g.gameObject.SetActive(false);
@@ -412,7 +322,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-             
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2g");
+
                     jobotIntroStage1Section1f.gameObject.SetActive(false);
                     jobotIntroStage1Section1g.gameObject.SetActive(true);
                     jobotIntroStage1Section1h.gameObject.SetActive(false);
@@ -433,7 +344,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-            
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2h");
+
                     jobotIntroStage1Section1g.gameObject.SetActive(false);
                     jobotIntroStage1Section1h.gameObject.SetActive(true);
                     jobotIntroStage1Section1i.gameObject.SetActive(false);
@@ -455,7 +367,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                  
+                    LOLSDK.Instance.SpeakText("jobotIntroStage2i");
+
                     jobotIntroStage1Section1h.gameObject.SetActive(false);
                     jobotIntroStage1Section1i.gameObject.SetActive(true);
                     jobotStage2PlantSeed.gameObject.SetActive(false);
@@ -512,7 +425,8 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     // camZoomOutAnim.enabled = true;
                     resetplants.gameObject.SetActive(true);
-                
+                    LOLSDK.Instance.SpeakText("jobotStage2PlantSeed");
+
                     jobotIntroStage1Section1i.gameObject.SetActive(false);
                     jobotStage2PlantSeed.gameObject.SetActive(true);
                     jobotStage2PlantSeeda.gameObject.SetActive(false);
@@ -541,7 +455,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                
+                    LOLSDK.Instance.SpeakText("jobotStage2PlantSeeda");
+
                     jobotStage2PlantSeed.gameObject.SetActive(false);
                     jobotStage2PlantSeeda.gameObject.SetActive(true);
                     jobotStage2PlantSeedb.gameObject.SetActive(false);
@@ -565,7 +480,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                
+                    LOLSDK.Instance.SpeakText("jobotStage2PlantSeedb");
+
                     jobotStage2PlantSeeda.gameObject.SetActive(false);
                     jobotStage2PlantSeedb.gameObject.SetActive(true);
                     jobotStage2PlantSeede.gameObject.SetActive(false);
@@ -586,7 +502,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-           
+                    LOLSDK.Instance.SpeakText("jobotStage2PlantSeedf");
+
                     jobotStage2PlantSeedb.gameObject.SetActive(false);
                     jobotStage2PlantSeede.gameObject.SetActive(true);
                     jobotStage2PlantSeede.enabled = true;
@@ -614,6 +531,7 @@ namespace Alpha.Phases.Robo.Grow
                     help.enabled = true;
                     tasks.enabled = true;
                     robotControl.enabled = true;
+                   // LOLSDK.Instance.SpeakText("jobotStage2PlantSeed");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -633,7 +551,8 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     textPanalToHide.SetActive(true);
-                
+
+                    LOLSDK.Instance.SpeakText("jobotStage2PlantSeedComplete");
 
                     TTSJobotPlantSeed6.gameObject.SetActive(false);
                     TTSSeedsComplete.gameObject.SetActive(true);
@@ -678,6 +597,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     textPanalToHide.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage2PlantSeedExamineWaterplantComplete");
 
                     TTSSeedsComplete.gameObject.SetActive(false);
                     TTSseedsWateredComplete.gameObject.SetActive(true);
@@ -700,7 +620,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     textPanalToHide.SetActive(true);
                     //robotAnim.enabled = true;
-                                    
+                    LOLSDK.Instance.SpeakText("jobotStage2Completeb");
+
                     TTSStage2Complete.gameObject.SetActive(true);
                     jobotStage2PlantSeed.gameObject.SetActive(false);
                     jobotStage2PlantSeeda.gameObject.SetActive(false);
