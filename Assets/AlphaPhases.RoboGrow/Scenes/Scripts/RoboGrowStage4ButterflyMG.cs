@@ -119,6 +119,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGame");
 
                     robCont.enabled = false;
                     playerCamera.enabled = false;
@@ -154,6 +155,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamea");
 
                     jobotIntroStage4Tree.gameObject.SetActive(false);
                     jobotIntroStage4Tree1a.gameObject.SetActive(true);
@@ -177,6 +179,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGameb");
 
                     jobotIntroStage4Tree1a.gameObject.SetActive(false);
                     jobotIntroStage4Tree1b.gameObject.SetActive(true);
@@ -200,7 +203,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-              
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamee");
+
                     jobotIntroStage4Tree1b.gameObject.SetActive(false);
                     jobotIntroStage4Tree1e.gameObject.SetActive(true);
                     jobotIntroStage4Tree1f.gameObject.SetActive(false);
@@ -222,6 +226,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamef");
 
                     jobotIntroStage4Tree1e.gameObject.SetActive(false);
                     jobotIntroStage4Tree1f.gameObject.SetActive(true);
@@ -247,6 +252,7 @@ namespace Alpha.Phases.Robo.Grow
                     //         jobotIntroStage4Tree1g.enabled = false;
                     jobotIntroStage4Tree1h.gameObject.SetActive(true);
                     jobotIntroStage4Tree1i.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGameh");
 
                     StartCoroutine(CloseTextPanal());
                     textRead6 = true;
@@ -269,6 +275,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotIntroStage4Tree1h.gameObject.SetActive(false);
                     jobotIntroStage4Tree1i.gameObject.SetActive(true);
                     jobotIntroStage4Tree1j.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamei");
 
                     progressText.gameObject.SetActive(true);
 
@@ -324,13 +331,14 @@ namespace Alpha.Phases.Robo.Grow
 
             }
 
-            if (currentStage4BFText == 8)
+            if (currentStage4BFText == 11)
             {
 
                 if (!textRead8)
                 {
                     jobotIntroStage4Tree1i.gameObject.SetActive(false);
                     jobotIntroStage4Tree1j.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamej");
 
 
                     buttTargetImage.gameObject.SetActive(false);
@@ -404,15 +412,15 @@ namespace Alpha.Phases.Robo.Grow
         {
             LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGameb");
         }
-        void JobotStage4Tree4()
-        {
-            LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamec");
-        }
+    ///    void JobotStage4Tree4()
+   //     {
+  //          LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamec");
+   //     }
 
-        void JobotStage4Tree5()
-        {
-            LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamed");
-        }
+   //     void JobotStage4Tree5()
+   //     {
+    //        LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamed");
+    //    }
 
         void JobotStage4Tree6()
         {
@@ -424,10 +432,10 @@ namespace Alpha.Phases.Robo.Grow
         {
             LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGamef");
         }
-        void JobotStage4Tree8()
-        {
-            LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGameg");
-        }
+   //     void JobotStage4Tree8()
+  //      {
+  //          LOLSDK.Instance.SpeakText("jobotStage4BFlyMiniGameg");
+  //      }
 
         void JobotStage4Tree9()
         {

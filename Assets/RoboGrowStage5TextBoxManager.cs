@@ -218,6 +218,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressTextBack.gameObject.SetActive(false);
                         robotControl.enabled = false;
                         textPanalToHide.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1");
 
                         jobotIntroStage5Section1.gameObject.SetActive(true);
                         jobotIntroStage5Section1b.gameObject.SetActive(false);
@@ -229,6 +230,7 @@ namespace Alpha.Phases.Robo.Grow
                             StartCoroutine(DelayProgressButtonVar1());
                             progressTextIsShowing = true;
                         }
+                        textRead1 = true;
                     }
                 }
             
@@ -243,7 +245,8 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage5Section1.gameObject.SetActive(false);
                         jobotIntroStage5Section1b.gameObject.SetActive(true);
                         jobotIntroStage5Section1e.gameObject.SetActive(false);
-
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1b");
+                        progressTextBack.gameObject.SetActive(true);
                         closeDoor.SetBool("doorNeedsToBeOpen", false);
                         closeDoor.SetBool("closeDoor", false);
                         closeDoor.SetTrigger("resetDoorValues");
@@ -259,12 +262,13 @@ namespace Alpha.Phases.Robo.Grow
 
                 if (currentStageOfText == 3)
                 {
-                    if (textRead3)
+                    if (!textRead3)
                     {
                         if (!textBeenRead)
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1e");
 
                         jobotIntroStage5Section1b.gameObject.SetActive(false);
                         jobotIntroStage5Section1e.gameObject.SetActive(true);
@@ -288,6 +292,7 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1g");
 
                         jobotIntroStage5Section1e.gameObject.SetActive(false);
                         //     jobotIntroStage5Section1f.enabled = false;
@@ -312,11 +317,12 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1h");
 
                         jobotIntroStage5Section1g.gameObject.SetActive(false);
                         jobotIntroStage5Section1h.gameObject.SetActive(true);
-                        //          jobotIntroStage5Section1i.enabled = false;
-                        jobotIntroStage5Section1j.enabled = false;
+                        jobotIntroStage5Section1h.enabled = true;
+                        jobotIntroStage5Section1j.gameObject.SetActive(false);
                         if (!progressTextIsShowing)
                         { // 3 second delay
                             StartCoroutine(DelayProgressButtonVar2());
@@ -336,9 +342,11 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1j");
 
                         jobotIntroStage5Section1h.gameObject.SetActive(false);
                         jobotIntroStage5Section1j.gameObject.SetActive(true);
+                        jobotIntroStage5Section1j.enabled = true;
                         jobotIntroStage5Section1n.gameObject.SetActive(false);
 
                         if (!progressTextIsShowing)
@@ -361,6 +369,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage5Section1j.gameObject.SetActive(false);
                         jobotIntroStage5Section1n.gameObject.SetActive(true);
 
+                        LOLSDK.Instance.SpeakText("jobotStage5Intro1n");
 
                         forwardButtonToDisable.gameObject.SetActive(false);
                         robotCamToEnable.enabled = true;
@@ -458,6 +467,7 @@ namespace Alpha.Phases.Robo.Grow
 
                         jobotIntroStage5Section1n.enabled = false;
 
+                        LOLSDK.Instance.SpeakText("jobotStage5PlantComplete1");
 
                         // This is the text for the removal of the flowers on stage 5
                         jobotIntroStage5PlantRemovalComplete1.gameObject.SetActive(true);
@@ -485,7 +495,8 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
-
+                        LOLSDK.Instance.SpeakText("jobotStage5PlantComplete1a");
+                        progressTextBack.gameObject.SetActive(true);
                         // This is the text for the removal of the flowers on stage 5
                         jobotIntroStage5PlantRemovalComplete1.gameObject.SetActive(false);
                         jobotIntroStage5PlantRemovalComplete1a.gameObject.SetActive(true);
@@ -510,6 +521,7 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5PlantComplete1b");
 
                         jobotIntroStage5PlantRemovalComplete1a.gameObject.SetActive(false);
                         jobotIntroStage5PlantRemovalComplete1b.gameObject.SetActive(true);
@@ -534,6 +546,7 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5PlantComplete1c");
 
                         jobotIntroStage5PlantRemovalComplete1b.gameObject.SetActive(false);
                         jobotIntroStage5PlantRemovalComplete1c.gameObject.SetActive(true);
@@ -553,6 +566,7 @@ namespace Alpha.Phases.Robo.Grow
                         textPanalToHide.SetActive(true);
 
                         TTSStage5PlantRemovalComplete1c.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage5StageCompleteMessage");
 
                         stage5AllTasksComplete.gameObject.SetActive(true);
                         // StartCoroutine(CloseTextPanal());
@@ -573,6 +587,7 @@ namespace Alpha.Phases.Robo.Grow
                         }
                         textPanalToHide.gameObject.SetActive(true);
                         textPanalToHide.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameText");
 
                         stage5AllTasksComplete.gameObject.SetActive(false);
 
@@ -598,6 +613,8 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameTexta");
+
                         //     textPanalToHide.SetActive(true);
                         jobotEndOFGame1.gameObject.SetActive(false);
                         jobotEndOFGame1a.gameObject.SetActive(true);
@@ -622,6 +639,7 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameTextb");
 
                         jobotEndOFGame1a.gameObject.SetActive(false);
                         jobotEndOFGame1b.gameObject.SetActive(true);
@@ -646,6 +664,7 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameTextc");
 
                         jobotEndOFGame1b.gameObject.SetActive(false);
                         jobotEndOFGame1c.gameObject.SetActive(true);
@@ -670,6 +689,7 @@ namespace Alpha.Phases.Robo.Grow
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameTextd");
 
                         jobotEndOFGame1c.gameObject.SetActive(false);
                         jobotEndOFGame1d.gameObject.SetActive(true);
@@ -691,52 +711,56 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     if (!endOfGameReadText6)
                     {
-
-                    }
-                    if (!textBeenRead)
-                    {
-                        progressText.gameObject.SetActive(false);
-                    }
-                    jobotEndOFGame1d.gameObject.SetActive(false);
-                    jobotEndOFGame1e.gameObject.SetActive(true);
-                    jobotEndOFGame1f.gameObject.SetActive(false);
-
-                    progressText.gameObject.SetActive(true);
-                    if (!progressTextIsShowing)
-                    { // 3 second delay
-                        StartCoroutine(DelayProgressButtonVar1());
-                        progressTextIsShowing = true;
-                    }
-                }
-
-                if (currentStageOfText == 31)
-                {
-                    if (!textRead7)
-                    {
                         if (!textBeenRead)
                         {
                             progressText.gameObject.SetActive(false);
                         }
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameTexte");
 
-                        jobotEndOFGame1e.gameObject.SetActive(false);
-                        jobotEndOFGame1f.gameObject.SetActive(true);
+                        jobotEndOFGame1d.gameObject.SetActive(false);
+                        jobotEndOFGame1e.gameObject.SetActive(true);
+                        jobotEndOFGame1f.gameObject.SetActive(false);
+
+                        progressText.gameObject.SetActive(true);
                         if (!progressTextIsShowing)
                         { // 3 second delay
                             StartCoroutine(DelayProgressButtonVar1());
                             progressTextIsShowing = true;
                         }
-                        progressText.gameObject.SetActive(true);
+                        endOfGameReadText6 = true;
+                    }
+                  
+                }
+
+                if (currentStageOfText == 31)
+                {
+                    if (!endOfGameReadText7)
+                    {
+                     //   if (!textBeenRead)
+                     //   {
+                    //        progressText.gameObject.SetActive(false);
+                   //     }
+                        LOLSDK.Instance.SpeakText("jobotStage5EndOfGameTextf");
+
+                        jobotEndOFGame1e.gameObject.SetActive(false);
+                        jobotEndOFGame1f.gameObject.SetActive(true);
+                     //   if (!progressTextIsShowing)
+                     //   { // 3 second delay
+                    //        StartCoroutine(DelayProgressButtonVar1());
+                    //        progressTextIsShowing = true;
+                    //    }
+                      //  progressText.gameObject.SetActive(true);
                         if (!saveGameOnce)
                         {
                             StartCoroutine(rgEnd.EndOfGameTimer());
                             saveGameOnce = true;
                         }
-                        textRead7 = true;
+                        endOfGameReadText7 = true;
                     }
-                  
 
+                    /*
                 }
-
+                
                 if (currentStageOfText == 32)
                 {
                     if (!endOfGameReadText8)
@@ -749,7 +773,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(true);
                         endOfGameReadText8 = true;
                     }
-                    /*
+                    
                       jobotIntroStage5Section1.enabled = false;
                     //          jobotIntroStage5Section1a.enabled = false;
                     jobotIntroStage5Section1b.enabled = false;

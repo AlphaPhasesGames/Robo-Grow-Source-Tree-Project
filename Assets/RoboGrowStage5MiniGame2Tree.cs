@@ -130,6 +130,8 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGame");
+
                     robCont.enabled = false;
                     playerCamera.enabled = false;
                     butterflyCharacter.SetActive(true);
@@ -163,6 +165,7 @@ namespace Alpha.Phases.Robo.Grow
                         progressText.gameObject.SetActive(false);
                     }
                     progressTextBack.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamea");
 
                     jobotIntroStage5Tree.gameObject.SetActive(false);
                     jobotIntroStage5Tree1a.gameObject.SetActive(true);
@@ -185,6 +188,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGameb");
 
                     jobotIntroStage5Tree1a.gameObject.SetActive(false);
                     jobotIntroStage5Tree1b.gameObject.SetActive(true);
@@ -210,6 +214,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamec");
 
                     jobotIntroStage5Tree1b.gameObject.SetActive(false);
                     jobotIntroStage5Tree1c.gameObject.SetActive(true);
@@ -231,6 +236,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamed");
 
                     jobotIntroStage5Tree1c.gameObject.SetActive(false);
                     jobotIntroStage5Tree1d.gameObject.SetActive(true);
@@ -250,7 +256,8 @@ namespace Alpha.Phases.Robo.Grow
             {
                 if (!textRead6)
                 {
-                    
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamee");
+
                     jobotIntroStage5Tree1d.gameObject.SetActive(false);
                     jobotIntroStage5Tree1e.gameObject.SetActive(true);
                     jobotIntroStage5Tree1f.gameObject.SetActive(false);
@@ -265,15 +272,16 @@ namespace Alpha.Phases.Robo.Grow
 
             if (currentStage5TreeText == 7)
             {
-                if (!textRead8)
+                if (!textRead7)
                 {
                     textPanal.SetActive(true);
                     jobotIntroStage5Tree1e.gameObject.SetActive(false);
                     jobotIntroStage5Tree1f.gameObject.SetActive(true);
                     jobotIntroStage5Tree1g.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamef");
 
                     StartCoroutine(ShowQuestion());
-                    textRead8 = true;
+                    textRead7 = true;
                 }
               
 
@@ -294,6 +302,8 @@ namespace Alpha.Phases.Robo.Grow
                     jobotIntroStage5Tree1f.gameObject.SetActive(false);
                     jobotIntroStage5Tree1g.gameObject.SetActive(true);
                     jobotIntroStage5Tree1h.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGameg");
+                    jobotIntroStage5Tree1WellDone.gameObject.SetActive(false);
 
                     progressText.gameObject.SetActive(true);
                     if (!progressTextIsShowing)
@@ -316,7 +326,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGameh");
+
                     jobotIntroStage5Tree1g.gameObject.SetActive(false);
                     jobotIntroStage5Tree1h.gameObject.SetActive(true);
                     jobotIntroStage5Tree1i.gameObject.SetActive(false);
@@ -345,6 +356,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotIntroStage5Tree1h.gameObject.SetActive(false);
                     jobotIntroStage5Tree1i.gameObject.SetActive(true);
                     jobotIntroStage5Tree1j.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamei");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -369,6 +381,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotIntroStage5Tree1i.gameObject.SetActive(false);
                     jobotIntroStage5Tree1j.gameObject.SetActive(true);
                     jobotIntroStage5Tree1k.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamej");
 
 
                     if (!progressTextIsShowing)
@@ -398,6 +411,7 @@ namespace Alpha.Phases.Robo.Grow
                     butterFlyAnimationCharachterPlayer.gameObject.SetActive(false);
                     rgBFCont.enabled = false;
                     robCont.enabled = true;
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGamek");
 
                     susanArrowToReset.gameObject.SetActive(true);
                     susan2ArrowToReset.gameObject.SetActive(true);
@@ -451,9 +465,11 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     textPanal.SetActive(true);
 
-                    jobotIntroStage5Tree1k.enabled = false;
-
+                    jobotIntroStage5Tree1k.gameObject.SetActive(false);
+                    jobotIntroStage5Tree1e.gameObject.SetActive(false);
+                    jobotIntroStage5Tree1f.gameObject.SetActive(false);
                     jobotIntroStage5Tree1WellDone.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage5ButterflyMiniGameWellDone");
 
 
 
@@ -476,20 +492,20 @@ namespace Alpha.Phases.Robo.Grow
         void OnClickBack()
         {
             currentStage5TreeText--;
-            textRead1 = true;
-            textRead2 = true;
-            textRead3 = true;
-            textRead4 = true;
-            textRead5 = true;
-            textRead6 = true;
-            textRead7 = true;
-            textRead8 = true;
-            textRead9 = true;
-            textRead10 = true;
-            textRead11 = true;
-            textRead12 = true;
-            textRead13 = true;
-            textRead14 = true;
+            textRead1 = false;
+            textRead2 = false;
+            textRead3 = false;
+            textRead4 = false;
+            textRead5 = false;
+            textRead6 = false;
+            textRead7 = false;
+            textRead8 = false;
+            textRead9 = false;
+            textRead10 = false;
+            textRead11 = false;
+            textRead12 = false;
+            textRead13 = false;
+            textRead14 = false;
 
 
         }
@@ -574,7 +590,7 @@ namespace Alpha.Phases.Robo.Grow
         {
             yield return new WaitForSeconds(2);
             currentStage5TreeText = 6;
-
+            textRead6 = false;
         }
 
 

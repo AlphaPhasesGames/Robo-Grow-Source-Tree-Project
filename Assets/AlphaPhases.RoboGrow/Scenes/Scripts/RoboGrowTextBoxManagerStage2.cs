@@ -628,6 +628,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotStage2PlantSeedb.gameObject.SetActive(false);
                     jobotStage2PlantSeede.gameObject.SetActive(false);
                     stage2Complete.gameObject.SetActive(true);
+                    text1Read18 = true;
                     StartCoroutine(HideText());
                 }
               

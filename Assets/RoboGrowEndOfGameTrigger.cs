@@ -58,20 +58,9 @@ namespace Alpha.Phases.Robo.Grow
                     }
                 }
             }
-           
-           
-
-
-
-
-           
         }
 
 
-        public void EndGame()
-        {
-          
-        }
 
         public IEnumerator EndOfGameTimer()
         {

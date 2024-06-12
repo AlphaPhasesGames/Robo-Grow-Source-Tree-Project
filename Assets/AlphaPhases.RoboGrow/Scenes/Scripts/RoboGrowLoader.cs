@@ -48,9 +48,9 @@ namespace Alpha.Phases.Robo.Grow
             LOLSDK.Instance.GameStateChanged += new GameStateChangedHandler(this.HandleGameStateChange);
 
             // Mock the platform-to-game messages when in the Unity editor.
-#if UNITY_EDITOR
-            LoadMockData();
-#endif
+//#if UNITY_EDITOR
+ //           LoadMockData();
+//#endif
 
             // Then, tell the platform the game is ready.
             LOLSDK.Instance.GameIsReady();
@@ -92,7 +92,7 @@ namespace Alpha.Phases.Robo.Grow
             // Either GameState.Paused or GameState.Resumed
             Debug.Log("HandleGameStateChange");
         }
-             
+       /*      
                      private void LoadMockData()
                      {
              #if UNITY_EDITOR
@@ -128,7 +128,7 @@ namespace Alpha.Phases.Robo.Grow
 
 
 
-                     }
+                     }*/
                
     }
 }

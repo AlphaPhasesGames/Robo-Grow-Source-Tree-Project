@@ -34,6 +34,7 @@ namespace Alpha.Phases.Robo.Grow
         public GameObject radish2ArrowToDisable;
         // public Button returnToPlayerCam;
 
+        public bool lastBool;
         // Stage 2 stuff
         #region "Stage2StuffToBeCollapsed
         public Button waterSeedsStage1;
@@ -556,7 +557,7 @@ namespace Alpha.Phases.Robo.Grow
                         LOLSDK.Instance.SpeakText("jobotStage3PlantWaterAssesmentText");
                         jobotIntroStage2PlantAsses1Stage3.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1aStage3.gameObject.SetActive(false);
-                        jobotIntroStage2PlantAsses1IncorrectGuess.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses1IncorrectGuessStage3.enabled = false;
 
                         if (!progressTextIsShowingStage3)
                         { // 3 second delay
@@ -706,6 +707,7 @@ namespace Alpha.Phases.Robo.Grow
                         jobotIntroStage2PlantAsses1cStage3.gameObject.SetActive(false);
                       //  jobotIntroStage2PlantAsses1dStage3.gameObject.SetActive(false);
                         jobotIntroStage2PlantAsses1IncorrectGuessStage3.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses1IncorrectGuessStage3.enabled = true;
                         if (!playerAlreadyGuessedIncorrectStage3)
                         {
                             StartCoroutine(ShowIncorrectGuessStage3());
@@ -769,6 +771,7 @@ namespace Alpha.Phases.Robo.Grow
                         susan1plantBoxToDisable.enabled = false;
                         jobotIntroStage2PlantAsses1Stage4.gameObject.SetActive(true);
                         jobotIntroStage2PlantAsses1aStage4.gameObject.SetActive(false);
+                        jobotIntroStage2PlantAsses1IncorrectGuessStage4.gameObject.SetActive(false);
 
                         if (!progressTextIsShowingStage4)
                         { // 3 second delay
@@ -832,11 +835,7 @@ namespace Alpha.Phases.Robo.Grow
                         deathCorrectAnswerButton.onClick.AddListener(CorrectAnswer);
                         adulthoodIncorrectAnswerButton.onClick.AddListener(IncorrectAnswer);
                         childhoodIncorrectAnswerButton.onClick.AddListener(IncorrectAnswer);
-                        if (!progressTextIsShowingStage4)
-                        { // 3 second delay
-                            StartCoroutine(DelayProgressButtonVar2Stage4());
-                            progressTextIsShowingStage4 = true;
-                        }
+                      
                         stage4Text3Read = true;
                     }
                    
@@ -919,11 +918,18 @@ namespace Alpha.Phases.Robo.Grow
             {
                 if (currentStage5TreeText == 1)
                 {
-                    robCont.enabled = false;
-                    textPanalStage5.SetActive(true);
-                    susan1plantBoxToDisable.enabled = false;
-                    jobotIntroStage2PlantAsses1Stage5.enabled = true;
-                    TTSJobotPlantAsses1Stage5.gameObject.SetActive(true);
+                    if (!lastBool)
+                    {
+                        robCont.enabled = false;
+                        textPanalStage5.SetActive(true);
+                        susan1plantBoxToDisable.enabled = false;
+                        jobotIntroStage2PlantAsses1Stage5.gameObject.SetActive(true);
+                        jobotIntroStage2PlantAsses1Stage5.enabled = true;
+                        TTSJobotPlantAsses1Stage5.gameObject.SetActive(true);
+                        LOLSDK.Instance.SpeakText("jobotStage5PlantAsses5");
+                        lastBool = true;
+                    }
+                   
                 }
             }
         }
@@ -1014,7 +1020,12 @@ namespace Alpha.Phases.Robo.Grow
             }
 
         }
-
+        public IEnumerator ResetStage3Text()
+        {
+            yield return new WaitForSeconds(0.5f);
+            currentStage3TreeText = 0;
+            currentStage4TreeText = 0;
+        }
 
         public void ReturnToPlayerCamFromTree()
         {
@@ -1028,6 +1039,9 @@ namespace Alpha.Phases.Robo.Grow
             playerAlreadyGuessedIncorrectStage4 = false;
             robotNavMeshAgentToStop.GetComponent<NavMeshAgent>().isStopped = false;
             amountOFGuesses = 3;
+           // StartCoroutine(ResetStage3Text());
+
+
         }
 
         public void ReturnToPlayerCamFromTreeFinal()
@@ -1186,6 +1200,13 @@ namespace Alpha.Phases.Robo.Grow
             radish1plantBoxToDisable.enabled = true;
             radish2plantBoxToDisable.enabled = true;
             rgStage2PR.amountOfFailsStage3++;
+            stage3Text1Read = false;
+            stage3Text2Read = false;
+            stage3Text3Read = false;
+            stage3Text4Read = false;
+            stage3Text5Read = false;
+            stage3Text6Read = false;
+            stage3Text7Read = false;
         }
 
         public IEnumerator ShowIncorrectGuessStage4()
@@ -1203,6 +1224,13 @@ namespace Alpha.Phases.Robo.Grow
             radish1plantBoxToDisable.enabled = true;
             radish2plantBoxToDisable.enabled = true;
             rgStage2PR.amountOfFailsStage4++;
+            stage4Text1Read = false;
+            stage4Text2Read = false;
+            stage4Text3Read = false;
+            stage4Text4Read = false;
+            stage4Text5Read = false;
+            stage4Text6Read = false;
+            stage4Text7Read = false;
         }
 
         

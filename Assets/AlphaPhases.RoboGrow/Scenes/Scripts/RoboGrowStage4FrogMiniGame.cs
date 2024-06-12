@@ -140,6 +140,7 @@ namespace Alpha.Phases.Robo.Grow
                     playerCamera.enabled = false;
                     jobotJobotStage4FrogText.gameObject.SetActive(true);
                     jobotJobotStage4FrogTexta.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGame");
 
 
                     if (!progressTextIsShowing)
@@ -165,6 +166,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage4FrogText.gameObject.SetActive(false);
                     jobotJobotStage4FrogTexta.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextaControls.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGamea");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -189,6 +191,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage4FrogTexta.gameObject.SetActive(false);
                     jobotJobotStage4FrogTextaControls.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextb.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGameaControls");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -212,6 +215,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage4FrogTextaControls.gameObject.SetActive(false);
                     jobotJobotStage4FrogTextb.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextc.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGameb");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -232,7 +236,9 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage4FrogTextb.gameObject.SetActive(false);
                     jobotJobotStage4FrogTextc.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextd.gameObject.SetActive(false);
-
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGamec");
+                    jobotJobotStage4Eaten.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
                     rgFrogCont.enabled = true;
                     progressTextBack.gameObject.SetActive(false);
                     progressText.gameObject.SetActive(false);
@@ -252,9 +258,10 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage4FrogTextc.gameObject.SetActive(false);
                     jobotJobotStage4FrogTextd.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGamed");
 
                     textRead6 = true;
-                    // StartCoroutine(CloseTextPanal());
+                    StartCoroutine(CloseTextPanal());
                 }
 
             }
@@ -266,10 +273,11 @@ namespace Alpha.Phases.Robo.Grow
                     textPanal.SetActive(true);
                     jobotJobotStage4FrogText.enabled = false;
 
-                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                    //jobotJobotStage4FrogTextc.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextd.gameObject.SetActive(false);
                     jobotJobotStage4FrogTextdCloser.gameObject.SetActive(true);
-                    jobotJobotStage4FrogTexte.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGamedCloser");
 
                     StartCoroutine(CloseTextPanal());
                     textRead7 = true;
@@ -288,10 +296,14 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     textPanal.SetActive(true);
                     rgFrogCont.enabled = false;
-                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                  //  jobotJobotStage4FrogTextc.gameObject.SetActive(true);
                     jobotJobotStage4FrogTextdCloser.gameObject.SetActive(false);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
                     jobotJobotStage4FrogTexte.gameObject.SetActive(true);
+                   // jobotJobotStage4FrogTexte.enabled = true;
+
                     jobotJobotStage4FrogTextf.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGamee");
 
                     progressText.gameObject.SetActive(true);
                     textRead8 = true;
@@ -307,9 +319,10 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
-                    jobotJobotStage4FrogTextc.gameObject.SetActive(true);
+                  //  jobotJobotStage4FrogTextc.gameObject.SetActive(true);
                     jobotJobotStage4FrogTexte.gameObject.SetActive(false);
                     jobotJobotStage4FrogTextf.gameObject.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGamef");
 
                     StartCoroutine(CloseTextFinalTime());
                     textRead9 = true;
@@ -412,8 +425,9 @@ namespace Alpha.Phases.Robo.Grow
                     progressText.gameObject.SetActive(false);
                     //rgFrogCont.enabled = false;
                     jobotJobotStage4Eaten.gameObject.SetActive(true);
-                    TTSJobotStage4FrogEaten.gameObject.SetActive(true);
+                    jobotJobotStage4FrogTextc.gameObject.SetActive(false);
 
+                    LOLSDK.Instance.SpeakText("jobotStage4FrogMiniGameEaten");
 
                     StartCoroutine(CloseTextPanal());
                     textRead12 = true;
@@ -540,6 +554,7 @@ namespace Alpha.Phases.Robo.Grow
         {
             yield return new WaitForSeconds(3);
             textRead5 = false;
+            textRead12 = false;
             currentStage3FrogText = 5;
 
         }

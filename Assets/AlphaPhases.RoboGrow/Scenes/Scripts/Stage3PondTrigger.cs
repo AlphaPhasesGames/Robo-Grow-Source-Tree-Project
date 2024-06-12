@@ -84,6 +84,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Pond1");
+
                     progressTextBack.gameObject.SetActive(false);
                     textPanal.SetActive(true);
                     jobotIntroStage3Pond.gameObject.SetActive(true);
@@ -107,6 +109,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Pond1a");
+
                     progressTextBack.gameObject.SetActive(true);
                     jobotIntroStage3Pond.gameObject.SetActive(false);
                     jobotIntroStage3Pond1a.gameObject.SetActive(true);
@@ -131,6 +135,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Pond1b");
 
                     jobotIntroStage3Pond1a.gameObject.SetActive(false);
                     jobotIntroStage3Pond1b.gameObject.SetActive(true);
@@ -157,6 +162,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Pond1c");
 
                     jobotIntroStage3Pond1b.gameObject.SetActive(false);
                     jobotIntroStage3Pond1c.gameObject.SetActive(true);
@@ -180,6 +186,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Pondd");
 
                     jobotIntroStage3Pond1c.gameObject.SetActive(false);
                     jobotIntroStage3Pond1d.gameObject.SetActive(true);

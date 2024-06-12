@@ -452,8 +452,9 @@ namespace Alpha.Phases.Robo.Grow
                         //       jobotIntroStage1Section1l.enabled = false;
                         jobotIntroStage1Section1m.gameObject.SetActive(false);
                         jobotFlowersWatered.gameObject.SetActive(false);
+                        LOLSDK.Instance.SpeakText("jobotStage3CompletePanal");
 
-                       
+
                         textRead12 = true;
                     }
                    

@@ -101,7 +101,6 @@ namespace Alpha.Phases.Robo.Grow
         {
             if (rgMain.stage2TreeExamindComplete && rgMain.stage2AllSeedWateredStage2 && rgMain.stage2MiniGameComplete)
             {
-
                 if (!playOnlyOnce)
                 {
                     // mainCameraCamera.enabled = true;
@@ -111,6 +110,7 @@ namespace Alpha.Phases.Robo.Grow
                     boxToDisable.enabled = true;
                     playOnlyOnce = true;
                     roboGrowLogoFade.gameObject.SetActive(true);
+                    rgMain.stage2TreeExamindComplete = false;
                 }
 
             }
@@ -208,7 +208,7 @@ namespace Alpha.Phases.Robo.Grow
 
         void stage1Complete()
         {
-            LOLSDK.Instance.SpeakText("stage1Complete");
+            LOLSDK.Instance.SpeakText("jobotStage2Completeb");
         }
 
         public IEnumerator StartStage3()

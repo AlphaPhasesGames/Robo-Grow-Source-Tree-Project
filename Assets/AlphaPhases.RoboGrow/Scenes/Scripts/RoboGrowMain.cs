@@ -1236,41 +1236,41 @@ namespace Alpha.Phases.Robo.Grow
                 taskList5.SetActive(false); // hide stage 5 task list
             }
 
-             // Debug key to finish stage 1 after removing the plants
-
-            if (Input.GetKeyDown(KeyCode.Y)) // press Y to debug stage 1 complete
-            {
-                stage1MinigameComplete = true;
-                stage1PlantRemovalComplete = true;
-                stage1PondExamined = true;
-                SaveStage1MiniGameComplete();
-                SaveStage1Pond();
-                SavePlantStage();
-                // seedsSavedInInventory = true;
-                // SaveStage1TasksComplete();
-
-
-            }
-            
-            // Debug key to finish stage 2 after placing and watering the plants
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                stage2MiniGameComplete = true;
-                stage2TreeExamindComplete = true;
-                SaveStage2TreeComplete();
-                SaveStage2MiniGameComplete();
-            }
-
-            // Debug key to finish stage 3 after placing and watering the plants
+            // Debug key to finish stage 1 after removing the plants
             /*
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                stage3TreeminigGameComplete = true;
-                stage3PondExamined = true;
-                SaveStage3MiniGameComplete();
-                SaveStage2MiniGameComplete();
-            }
+          if (Input.GetKeyDown(KeyCode.Y)) // press Y to debug stage 1 complete
+          {
+              stage1MinigameComplete = true;
+              stage1PlantRemovalComplete = true;
+              stage1PondExamined = true;
+              SaveStage1MiniGameComplete();
+              SaveStage1Pond();
+              SavePlantStage();
+              // seedsSavedInInventory = true;
+              // SaveStage1TasksComplete();
+
+
+          }
+
+          // Debug key to finish stage 2 after placing and watering the plants
+
+          if (Input.GetKeyDown(KeyCode.E))
+          {
+              stage2MiniGameComplete = true;
+              stage2TreeExamindComplete = true;
+              SaveStage2TreeComplete();
+              SaveStage2MiniGameComplete();
+          }
+
+          // Debug key to finish stage 3 after placing and watering the plants
+
+          if (Input.GetKeyDown(KeyCode.R))
+          {
+              stage3TreeminigGameComplete = true;
+              stage3PondExamined = true;
+              SaveStage3MiniGameComplete();
+              SaveStage2MiniGameComplete();
+          }
 */
 
 

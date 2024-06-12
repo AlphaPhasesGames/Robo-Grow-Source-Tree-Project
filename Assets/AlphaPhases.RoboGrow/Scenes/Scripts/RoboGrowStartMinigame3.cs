@@ -219,6 +219,7 @@ namespace Alpha.Phases.Robo.Grow
                     butterePlayerCont.enabled = false;
                     jobotJobotStage3TreeText.gameObject.SetActive(true);
                     jobotJobotStage3TreeTexta.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1");
 
                     susanPollenCollection1.gameObject.SetActive(true);
                     limaPollenCollection.gameObject.SetActive(true);
@@ -248,6 +249,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1a");
+
                     progressTextBack.gameObject.SetActive(true);
                     textPanal.SetActive(true);
                     jobotJobotStage3TreeText.gameObject.SetActive(false);
@@ -272,6 +275,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1c");
 
                     jobotJobotStage3TreeTexta.gameObject.SetActive(false);
                     //       jobotJobotStage3TreeTextb.enabled = false;
@@ -300,6 +304,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage3TreeTextc.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextd.gameObject.SetActive(true);
                     jobotJobotStage3TreeTextdControls.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1d");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -321,6 +326,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage3TreeTextd.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextdControls.gameObject.SetActive(true);
                     jobotJobotStage3TreeTextdGamePlayExplaination.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1dControls");
 
                     if (!disableAndEnablePause)
                     {
@@ -330,7 +336,7 @@ namespace Alpha.Phases.Robo.Grow
                     textRead5 = true;
                 } 
             }
-
+            
             if (currentStage3TreeText == 6)
             {
                 if (!textRead6)
@@ -341,6 +347,7 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     // textPanal.SetActive(true);
                     butterePlayerCont.enabled = false;
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1dGameplay");
 
                     jobotJobotStage3TreeTextdControls.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextdGamePlayExplaination.gameObject.SetActive(true);
@@ -365,6 +372,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1e");
 
                     jobotJobotStage3TreeTextdGamePlayExplaination.gameObject.SetActive(false);
                     jobotJobotStage3TreeTexte.gameObject.SetActive(true);
@@ -391,6 +399,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage3TreeTexte.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextf.gameObject.SetActive(true);
                     jobotJobotStage3TreeTextg.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1f");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -401,7 +410,7 @@ namespace Alpha.Phases.Robo.Grow
                 }
                 
             }
-
+            
             if (currentStage3TreeText == 9)
             {
                 if (!textRead9)
@@ -412,6 +421,7 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     stamenStigmaDiagram.gameObject.SetActive(true);
                     stamenStigmaDiagram.SetActive(true);
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1fa");
 
                     jobotJobotStage3TreeTextf.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextg.gameObject.SetActive(true);
@@ -440,6 +450,7 @@ namespace Alpha.Phases.Robo.Grow
                     jobotJobotStage3TreeTextg.gameObject.SetActive(false);
                     jobotJobotStage3TreeTexth.gameObject.SetActive(true);
                     jobotJobotStage3TreeTexti.gameObject.SetActive(false);
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1g");
 
                     if (!progressTextIsShowing)
                     { // 3 second delay
@@ -459,6 +470,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1h");
 
                     jobotJobotStage3TreeTexth.gameObject.SetActive(false);
                     jobotJobotStage3TreeTexti.gameObject.SetActive(true);
@@ -483,6 +495,7 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         progressText.gameObject.SetActive(false);
                     }
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1i");
 
                     jobotJobotStage3TreeTexti.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextk.gameObject.SetActive(true);
@@ -508,6 +521,7 @@ namespace Alpha.Phases.Robo.Grow
                     }
                     stamenStigmaDiagram.gameObject.SetActive(false);
                     butterePlayerCont.enabled = true;
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1k");
 
                     jobotJobotStage3TreeTextk.gameObject.SetActive(false);
                     jobotJobotStage3TreeTextm.gameObject.SetActive(true);
@@ -557,6 +571,8 @@ namespace Alpha.Phases.Robo.Grow
                 {
                     textPanal.SetActive(true);
 
+                    LOLSDK.Instance.SpeakText("jobotStage3Butterfly1WellDoneSusanPollen");
+
                     jobotJobotStage3TreeTextm.gameObject.SetActive(false);
                     jobotJobotStage3TreeTexto.gameObject.SetActive(true);
                     jobotJobotStage3TreeTextp.gameObject.SetActive(false);
@@ -580,6 +596,8 @@ namespace Alpha.Phases.Robo.Grow
                         textPanal.SetActive(true);
                         hasLimaBeanPopped = true;
 
+                        LOLSDK.Instance.SpeakText("jobotStage3Butterfly1WellDoneLimaBeanPollen");
+
                         jobotJobotStage3TreeTexto.gameObject.SetActive(false);
                         jobotJobotStage3TreeTextp.gameObject.SetActive(true);
                         jobotJobotStage3TreeTextq.gameObject.SetActive(false);
@@ -599,7 +617,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         textPanal.SetActive(true);
                         hasDiasyPopped = true;
-                  
+                        LOLSDK.Instance.SpeakText("jobotStage3Butterfly1WellDoneDaisyPollen");
+
                         jobotJobotStage3TreeTextp.gameObject.SetActive(false);
                         jobotJobotStage3TreeTextq.gameObject.SetActive(true);
                         jobotJobotStage3TreeTextr.gameObject.SetActive(false);
@@ -619,7 +638,8 @@ namespace Alpha.Phases.Robo.Grow
                     {
                         textPanal.SetActive(true);
                         hasradishPopped = true;
-                     
+                        LOLSDK.Instance.SpeakText("jobotStage3Butterfly1WellDoneRadishPollen");
+
                         jobotJobotStage3TreeTextq.gameObject.SetActive(false);
                         jobotJobotStage3TreeTextr.gameObject.SetActive(true);
                         jobotJobotStage3TreeTexts.gameObject.SetActive(false);
@@ -645,6 +665,7 @@ namespace Alpha.Phases.Robo.Grow
                     wingFlapSFX.Stop();
                     butterePlayerCont.enabled = false;
                     playerCamera.enabled = true;
+                    LOLSDK.Instance.SpeakText("jobotStage3ButterflyPlantsPollinated");
 
                     progressText.gameObject.SetActive(false);
                     robCont.enabled = true;
@@ -749,10 +770,7 @@ namespace Alpha.Phases.Robo.Grow
             LOLSDK.Instance.SpeakText("jobotStage3Butterfly1a");
         }
 
-        void JobotStage3TreeMG3()
-        {
-            LOLSDK.Instance.SpeakText("jobotStage3Butterfly1b");
-        }
+     
         void JobotStage3TreeMG4()
         {
             LOLSDK.Instance.SpeakText("jobotStage3Butterfly1c");
@@ -820,11 +838,7 @@ namespace Alpha.Phases.Robo.Grow
             LOLSDK.Instance.SpeakText("jobotStage3Butterfly1k");
         }
 
-        void JobotStage3TreeMG14FirstPollenCollected()
-        {
-            LOLSDK.Instance.SpeakText("jobotStage3Butterfly1WellDone");
-
-        }
+      
         void JobotStage3Tree15SusanPollenCollected()
         {
             LOLSDK.Instance.SpeakText("jobotStage3Butterfly1WellDoneSusanPollen");
