@@ -307,7 +307,7 @@ namespace Alpha.Phases.Robo.Grow
                     TTSMGEndTextButton1a.gameObject.SetActive(false);
                     TTSMGEndTextButton1b.gameObject.SetActive(false);
 
-                    MGNotBigEnough.enabled = true;
+                    MGNotBigEnough.gameObject.SetActive(true);
                     TTSMGEndTextButtonNotBigEnough.gameObject.SetActive(true);
                     StartCoroutine(MoveTextOn());
 
@@ -358,12 +358,15 @@ namespace Alpha.Phases.Robo.Grow
             */
             if (eggIncorrect)
                 {
+                textPanalToHide.gameObject.SetActive(false);
                     catapillerCamToDisable.enabled = true;
                     cocoonCam.enabled = false;
                 // UICanvasToHide.gameObject.SetActive(false);
                StartCoroutine(rgMiniStart.IncorrectGuess());
                 rgMiniStart.playerGuessedIncorrectAlready = false;
-                   currentStage1TreeText = 6;
+                   currentStage1TreeText = 5;
+                MGNotBigEnough.gameObject.SetActive(false);
+
                 eggIncorrect = false;
                     catControl.enabled = false;
                     catapillerPlayerObject.transform.localPosition = new Vector3(1.31335f, 0.1498f, 0.73617f);
@@ -380,16 +383,21 @@ namespace Alpha.Phases.Robo.Grow
                     hasSlot2FilledAlready = true;
                     hasSlot3FilledAlready = true;
                     hasSlot4FilledAlready = true;
-                }
-        
-                if (larvaIncorrect)
+                text1Read = false;
+
+            }
+
+            if (larvaIncorrect)
                 {
                     catapillerCamToDisable.enabled = true;
                     cocoonCam.enabled = false;
+                textPanalToHide.gameObject.SetActive(false);
+                MGNotBigEnough.gameObject.SetActive(false);
+
                 // UICanvasToHide.gameObject.SetActive(false);
                 StartCoroutine(rgMiniStart.IncorrectGuess());
                 rgMiniStart.playerGuessedIncorrectAlready = false;
-                currentStage1TreeText = 6;
+                 currentStage1TreeText = 5;
                     larvaIncorrect = false;
                     catControl.enabled = false;
                     catapillerPlayerObject.transform.localPosition = new Vector3(1.31335f, 0.1498f, 0.73617f);
@@ -406,16 +414,20 @@ namespace Alpha.Phases.Robo.Grow
                     hasSlot2FilledAlready = true;
                     hasSlot3FilledAlready = true;
                     hasSlot4FilledAlready = true;
-                }
+                text1Read = false;
 
-                else if(pupaIncorrect)
+            }
+
+            else if(pupaIncorrect)
                 {
                     catapillerCamToDisable.enabled = true;
                     cocoonCam.enabled = false;
+                textPanalToHide.gameObject.SetActive(false);
+                MGNotBigEnough.gameObject.SetActive(false);
                 // UICanvasToHide.gameObject.SetActive(false);
                 StartCoroutine(rgMiniStart.IncorrectGuess());
                 rgMiniStart.playerGuessedIncorrectAlready = false;
-                currentStage1TreeText = 6;
+                currentStage1TreeText = 5;
                 pupaIncorrect = false;
                     catControl.enabled = false;
                     catapillerPlayerObject.transform.localPosition = new Vector3(1.31335f, 0.1498f, 0.73617f);
@@ -432,16 +444,20 @@ namespace Alpha.Phases.Robo.Grow
                     hasSlot2FilledAlready = true;
                     hasSlot3FilledAlready = true;
                     hasSlot4FilledAlready = true;
+                text1Read = false;
                 }
 
                 else  if (adultIncorrect)
                 {
                     catapillerCamToDisable.enabled = true;
                     cocoonCam.enabled = false;
-                    UICanvasToHide.gameObject.SetActive(false);
+                textPanalToHide.gameObject.SetActive(false);
+                MGNotBigEnough.gameObject.SetActive(false);
+
+                UICanvasToHide.gameObject.SetActive(false);
                 StartCoroutine(rgMiniStart.IncorrectGuess());
                 rgMiniStart.playerGuessedIncorrectAlready = false;
-                currentStage1TreeText = 6;
+               currentStage1TreeText = 5;
                 adultIncorrect = false;
                     catControl.enabled = false;
                     catapillerPlayerObject.transform.localPosition = new Vector3(1.31335f, 0.1498f, 0.73617f);
@@ -458,8 +474,10 @@ namespace Alpha.Phases.Robo.Grow
                     hasSlot2FilledAlready = true;
                     hasSlot3FilledAlready = true;
                     hasSlot4FilledAlready = true;
-                }
+                text1Read = false;
+
             }
+        }
 
              
               
@@ -496,7 +514,7 @@ namespace Alpha.Phases.Robo.Grow
                 if (!catControl.allCollectablesCollected)
                 {
                    
-                    currentStage1TreeText = 5;
+                    currentStage1TreeText = 6;
 
                 }
 
@@ -536,8 +554,8 @@ namespace Alpha.Phases.Robo.Grow
         public IEnumerator MoveTextOn()
         {
             yield return new WaitForSeconds(3);
-            currentStage1TreeText = 6;
-            textRead6 = false;
+            currentStage1TreeText = 5;
+            text5Read = false;
         }
 
         void OnClick()
@@ -555,7 +573,7 @@ namespace Alpha.Phases.Robo.Grow
             text3Read = false;
             text4Read = false;
             text5Read = false;
-
+            textRead6 = false;
         }
 
         void JobotStage1EndTree1()

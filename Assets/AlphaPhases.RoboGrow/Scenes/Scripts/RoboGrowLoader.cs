@@ -49,7 +49,7 @@ namespace Alpha.Phases.Robo.Grow
 
             // Mock the platform-to-game messages when in the Unity editor.
 //#if UNITY_EDITOR
- //           LoadMockData();
+//           LoadMockData();
 //#endif
 
             // Then, tell the platform the game is ready.
@@ -92,7 +92,7 @@ namespace Alpha.Phases.Robo.Grow
             // Either GameState.Paused or GameState.Resumed
             Debug.Log("HandleGameStateChange");
         }
-       /*      
+            /*
                      private void LoadMockData()
                      {
              #if UNITY_EDITOR

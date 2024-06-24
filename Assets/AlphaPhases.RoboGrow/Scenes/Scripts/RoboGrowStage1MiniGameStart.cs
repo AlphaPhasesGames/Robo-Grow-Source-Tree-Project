@@ -106,7 +106,7 @@ namespace Alpha.Phases.Robo.Grow
             TTSJobotTree1j.onClick.AddListener(JobotStage1Tree11);
 
             TTSJobotTree1Proceed.onClick.AddListener(JobotStage1Tree1Proceed);
-
+            TTSIncorrectGuessPanal.onClick.AddListener(JobotStage1Tree1Incorrect);
 
             stage1MGLevel.SetActive(false);
         }
@@ -379,7 +379,8 @@ namespace Alpha.Phases.Robo.Grow
             {
                 if (!playerGuessedIncorrectAlready) 
                 {
-           
+                    LOLSDK.Instance.SpeakText("stage1MiniGameInfoIncorrectGuess");
+
                     TTSJobotTree1Proceed.gameObject.SetActive(false);
                     jobotIntroStage1Tree1Proceed.gameObject.SetActive(false);
 
@@ -593,6 +594,12 @@ namespace Alpha.Phases.Robo.Grow
         void JobotStage1Tree1Proceed()
         {
             LOLSDK.Instance.SpeakText("stage1MiniGameInfoProceedToEnd");
+
+        }
+
+        void JobotStage1Tree1Incorrect()
+        {
+            LOLSDK.Instance.SpeakText("stage1MiniGameInfoIncorrectGuess");
 
         }
 
