@@ -118,8 +118,8 @@ QualitySettings:
     name: High
     pixelLightCount: 2
     shadows: 1
-    shadowResolution: 2
-    shadowProjection: 1
+    shadowResolution: 1
+    shadowProjection: 0
     shadowCascades: 2
     shadowDistance: 25
     shadowNearPlaneOffset: 1
